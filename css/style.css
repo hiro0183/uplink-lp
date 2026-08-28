@@ -1,0 +1,166 @@
+/* 単一の世界観に振り切った設計。配色は全て明示指定 */
+  .lp{
+    --bg:#173247; --bg2:#1B3A50; --surf:#1E4159; --surf2:#245068;
+    --line:rgba(255,255,255,.14); --line2:rgba(255,255,255,.26);
+    --ink:#FFFFFF; --ink2:#D5E5EA; --mut:#A2BBC6;
+    --cy:#7BE4DD; --cyd:#06322F; --am:#EBDCB6;
+    --fg:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+    --fm:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+    --fn:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --u:10px;
+    background:var(--bg); color:var(--ink); font-family:var(--fg);
+    font-size:17.5px; font-weight:500; line-height:1.95;
+    -webkit-font-smoothing:antialiased;
+  }
+  .lp *{box-sizing:border-box}
+  .lp .wrap{max-width:1060px;margin:0 auto;padding-inline:26px}
+  .lp .narrow{max-width:760px}
+  .lp .sec{padding-block:calc(var(--u)*9);position:relative}
+  .lp p{margin:0 0 18px}
+  .lp strong{font-weight:700;color:#FFFFFF}
+
+  /* 見出し */
+  .lp h1{font-family:var(--fm);font-size:clamp(31px,5.6vw,56px);line-height:1.5;letter-spacing:.03em;
+    margin:0 0 24px;font-weight:600;color:#FFFFFF;text-wrap:balance}
+  .lp h2{font-family:var(--fm);font-size:clamp(25px,3.9vw,36px);line-height:1.6;letter-spacing:.06em;
+    margin:0 0 calc(var(--u)*3);font-weight:600;color:#FFFFFF;text-wrap:balance}
+  .lp h3{font-family:var(--fm);font-size:20.5px;line-height:1.65;margin:0 0 10px;font-weight:600;letter-spacing:.04em;color:#FFFFFF}
+  .lp .lead{color:var(--ink2)}
+  .lp .mut{color:var(--mut)}
+
+  /* セクション見出しの目印（罫線＋ラベル） */
+  .lp .eye{display:flex;align-items:center;gap:14px;margin:0 0 20px;
+    font-size:13px;letter-spacing:.26em;font-weight:700;color:var(--cy)}
+  .lp .eye::after{content:"";flex:1;height:1px;background:var(--line2)}
+  .lp .eye.am{color:var(--am)}
+
+  /* CTA */
+  .lp .cta{display:inline-flex;align-items:center;gap:12px;background:var(--cy);color:var(--cyd);
+    text-decoration:none;font-weight:700;font-size:18.5px;letter-spacing:.03em;
+    padding:21px 34px;border-radius:2px;transition:transform .6s ease,box-shadow .6s ease}
+  .lp .cta::after{content:"→";font-family:var(--fn);font-size:20px;line-height:1}
+  .lp .cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(123,228,221,.30)}
+  .lp .cta:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px}
+  .lp .ctanote{font-size:14.5px;color:var(--mut);margin-top:14px}
+
+  /* ===== ヒーロー ===== */
+  .lp .hero{background:
+      radial-gradient(900px 420px at 78% 8%,rgba(123,228,221,.16),transparent 62%),
+      linear-gradient(180deg,#142D40 0%,#1B3A50 100%);
+    border-bottom:1px solid var(--line);padding-block:calc(var(--u)*10) calc(var(--u)*9);overflow:hidden}
+  .lp .heroin{display:grid;gap:44px;grid-template-columns:1fr;align-items:center}
+  @media(min-width:900px){.lp .heroin{grid-template-columns:1fr 300px}}
+  .lp .brand{font-family:var(--fn);font-size:13.5px;letter-spacing:.42em;font-weight:700;
+    color:var(--cy);margin:0 0 26px}
+  .lp .hero p.sub{font-size:clamp(18px,2.5vw,22px);line-height:1.75;color:var(--cy);
+    font-weight:700;margin:0 0 24px}
+  .lp .portwrap{position:relative;justify-self:center}
+  .lp .portwrap::before{content:"";position:absolute;inset:-14px -14px auto auto;
+    width:104px;height:104px;border-top:1px solid var(--cy);border-right:1px solid var(--cy);opacity:.75}
+  .lp .portwrap img{display:block;width:100%;max-width:270px;aspect-ratio:4/5;object-fit:cover;
+    filter:grayscale(.18) contrast(1.04)}
+  .lp .portcap{font-size:13.5px;color:var(--mut);margin-top:14px;letter-spacing:.05em}
+
+  /* 大きな数字 */
+  .lp .figrow{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:calc(var(--u)*5)}
+  .lp .fig{background:var(--bg2);padding:26px 24px}
+  .lp .fig b{display:block;font-family:var(--fn);font-size:clamp(38px,6vw,54px);line-height:1;
+    font-weight:700;color:var(--cy);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .lp .fig b i{font-style:normal;font-size:19px;font-family:var(--fg);margin-left:6px;color:#FFFFFF;font-weight:700}
+  .lp .fig span{display:block;font-size:15.5px;color:var(--mut);margin-top:10px;line-height:1.7}
+
+  /* ===== 悩みリスト（連番は付けない=順序ではないため） ===== */
+  .lp .probs{display:grid;gap:0;border-top:1px solid var(--line)}
+  .lp .prob{display:grid;gap:6px 22px;grid-template-columns:1fr;padding:22px 0;
+    border-bottom:1px solid var(--line)}
+  @media(min-width:720px){.lp .prob{grid-template-columns:230px 1fr;align-items:baseline}}
+  .lp .prob b{font-size:18px;color:#FFFFFF;font-weight:700}
+  .lp .prob span{color:var(--ink2);font-size:16.5px}
+
+  /* ===== 旅の記録（暖色） ===== */
+  .lp .travel{background:linear-gradient(180deg,#1B3A50 0%,#20475F 100%);
+    border-block:1px solid var(--line)}
+  .lp .gal{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:calc(var(--u)*4)}
+  .lp .shot{margin:0;position:relative}
+  .lp .shot img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;
+    border:1px solid rgba(123,228,221,.34);filter:saturate(.94) contrast(1.03)}
+  .lp .shot figcaption{font-size:14px;color:var(--am);margin-top:9px;letter-spacing:.09em}
+  .lp .gal .shot:first-child{grid-column:span 2}
+  @media(max-width:560px){.lp .gal .shot:first-child{grid-column:auto}}
+  .lp .slot{border:1px dashed rgba(235,220,182,.5);background:rgba(235,220,182,.06);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    gap:7px;padding:18px;color:var(--am);aspect-ratio:4/3}
+  .lp .slot b{font-family:var(--fn);font-size:16px;letter-spacing:.14em;font-weight:700}
+  .lp .slot span{font-size:13.5px;line-height:1.7;color:#CFC3A0;max-width:26ch}
+  .lp .slot.wide{aspect-ratio:16/9;border-color:rgba(123,228,221,.5);background:rgba(123,228,221,.07);color:var(--cy)}
+  .lp .slot.wide span{color:#A7CCD4}
+
+  /* ===== 流れ（本物の順序なので連番を使う） ===== */
+  .lp .steps{display:grid;gap:0;margin-top:calc(var(--u)*3)}
+  .lp .step{display:grid;grid-template-columns:74px 1fr;gap:22px;padding:26px 0;
+    border-top:1px solid var(--line);position:relative}
+  .lp .step:last-child{border-bottom:1px solid var(--line)}
+  .lp .step .no{font-family:var(--fn);font-size:34px;font-weight:700;line-height:1;color:var(--cy);
+    font-variant-numeric:tabular-nums;opacity:.85}
+  .lp .step p{margin:0;color:var(--ink2);font-size:16.5px}
+
+  /* ===== 仕組み（計器盤） ===== */
+  .lp .mods{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));margin-top:calc(var(--u)*3)}
+  .lp .mod{background:var(--surf);border:1px solid var(--line);padding:24px}
+  .lp .modhead{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+  .lp .dot{width:8px;height:8px;border-radius:50%;background:var(--cy);flex:none;
+    box-shadow:0 0 0 4px rgba(123,228,221,.20)}
+  .lp .modhead span{font-family:var(--fg);font-size:13px;letter-spacing:.18em;color:var(--cy);font-weight:700}
+  .lp .mod p{margin:0;color:var(--ink2);font-size:16.5px}
+  .lp .mod .slot{margin-top:16px}
+
+  /* ===== 選ばれる理由 ===== */
+  .lp .reason{border-top:1px solid var(--line);padding:30px 0}
+  .lp .reason:last-of-type{border-bottom:1px solid var(--line)}
+  .lp .reason h3{font-size:clamp(20px,2.6vw,25px);margin-bottom:12px}
+  .lp .reason p{margin:0;color:var(--ink2)}
+
+  /* ===== サービス ===== */
+  .lp .svc{background:var(--surf);border:1px solid var(--line);border-left:2px solid var(--cy);padding:26px;margin-bottom:16px}
+  .lp .svc p{margin:0;color:var(--ink2)}
+  .lp .svc .pn{font-size:15px;color:var(--mut);margin-top:12px}
+
+  /* ===== 私について（明朝で声を変える） ===== */
+  .lp .about{background:linear-gradient(180deg,#193648 0%,#142D40 100%);border-block:1px solid var(--line)}
+  .lp .aboutin{display:grid;gap:38px;grid-template-columns:1fr}
+  @media(min-width:860px){.lp .aboutin{grid-template-columns:230px 1fr}}
+  .lp .aboutin img{width:100%;max-width:240px;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.18)}
+  .lp .story{font-family:var(--fm);font-size:18.5px;line-height:2.15;letter-spacing:.02em;color:var(--ink2)}
+  .lp .story p:last-child{margin-bottom:0}
+  .lp .sign{font-family:var(--fn);font-size:14px;letter-spacing:.3em;color:var(--cy);margin-top:26px;font-weight:700}
+
+  /* ===== FAQ ===== */
+  .lp .qa{border-top:1px solid var(--line);padding:24px 0}
+  .lp .qa:last-of-type{border-bottom:1px solid var(--line)}
+  .lp .qa h3{color:var(--cy);font-size:18.5px;margin-bottom:8px}
+  .lp .qa p{margin:0;color:var(--ink2);font-size:16.5px}
+
+  /* ===== 最終CTA ===== */
+  .lp .final{background:
+      radial-gradient(720px 320px at 50% 0%,rgba(123,228,221,.18),transparent 66%),
+      linear-gradient(180deg,#1B3A50 0%,#132B3D 100%);
+    text-align:center;border-top:1px solid var(--line)}
+  .lp .final h2{font-size:clamp(28px,4.6vw,44px)}
+  .lp .foot{border-top:1px solid var(--line);padding-block:calc(var(--u)*4);
+    font-family:var(--fn);font-size:14px;letter-spacing:.26em;color:var(--mut)}
+
+  /* 出現アニメーション（控えめに=0.6s） */
+  .lp .rv{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+  .lp .rv.on{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .lp .rv{opacity:1;transform:none;transition:none}
+    .lp .cta{transition:none}
+  }
+
+  /* プレビュー用の外枠 */
+  body{margin:0;background:#05080F}
+  .bar{font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;color:#93A2BA;
+    background:#122736;border-bottom:1px solid rgba(255,255,255,.1);
+    padding:12px 22px;font-size:13.5px;line-height:1.7}
+  .bar b{color:#7BE4DD}
