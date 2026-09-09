@@ -164,3 +164,29 @@
     background:#122736;border-bottom:1px solid rgba(255,255,255,.1);
     padding:12px 22px;font-size:13.5px;line-height:1.7}
   .bar b{color:#7BE4DD}
+
+/* ===== 実際に動いている仕組み：スクショの代わりに置く要素（2026-09-09） ===== */
+.lp .sched{margin-top:16px;border:1px solid var(--line);background:#0A111C}
+.lp .schhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--mut)}
+.lp .schhead b{color:var(--cy);font-family:var(--fn);letter-spacing:.12em;font-size:12px}
+.lp .sched ul{list-style:none;margin:0;padding:0}
+.lp .sched li{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:baseline;
+  padding:8px 14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.lp .sched li:last-child{border-bottom:none}
+.lp .sched time{font-family:var(--fn);font-size:12.5px;color:var(--cy);font-variant-numeric:tabular-nums}
+.lp .sched li span{font-size:13.5px;line-height:1.65;color:var(--ink2);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.lp .sched .more{padding:10px;text-align:center;font-size:12.5px;letter-spacing:.1em;
+  color:var(--mut);border-top:1px solid var(--line)}
+
+.lp .shotimg{margin-top:16px;border:1px solid var(--line);background:#FFFFFF;overflow:hidden}
+.lp .shotimg img{display:block;width:100%;height:auto}
+.lp .shotcap{margin:10px 0 0;font-size:12.5px;line-height:1.7;color:var(--mut)}
+
+.lp .spec{margin:16px 0 0;border-top:1px solid var(--line)}
+.lp .spec div{display:flex;justify-content:space-between;align-items:baseline;gap:18px;
+  padding:9px 0;border-bottom:1px solid var(--line)}
+.lp .spec dt{margin:0;color:var(--mut);font-size:14px;letter-spacing:.04em;white-space:nowrap}
+.lp .spec dd{margin:0;color:#FFFFFF;font-size:15px;font-weight:700;text-align:right}
+.lp .spec dd em{font-style:normal;color:var(--cy)}
