@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成相 裕康｜1to1シート（BNI白樺）</title>
+<meta name="description" content="成相 裕康（BNI 横浜セントラルリージョン 白樺チャプター）の1to1シート。紹介のお願い、紹介できる専門家、G.A.I.N.S.をまとめた個人ページです。">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="成相 裕康｜1to1シート（BNI白樺）">
+<meta property="og:description" content="経営者の時間を、1日2時間つくる仕事をしています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F3E8; --card:#FFFFFF; --line:#DCD6BF;
+  --ink:#1F3329; --ink2:#3E5548; --mut:#71806F;
+  --green:#2F5D46; --greend:#1D3A2C; --cream:#F1EAD3;
+  --accent:#2F5D46;
+  --ff:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  --fm:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#12201A; --card:#1A2C24; --line:#2E4438;
+    --ink:#EDF3EC; --ink2:#C8D6C9; --mut:#8FA192;
+    --green:#7FD1A8; --greend:#0E1913; --cream:#20302A;
+    --accent:#7FD1A8;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--ff);
+  font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:640px;margin:0 auto;padding:28px 20px 56px}
+a{color:var(--green)}
+h1,h2,h3{font-family:var(--fm); color:var(--ink); line-height:1.5; letter-spacing:.02em}
+p{margin:0 0 1em}
+
+/* ---- ヘッダー（名刺の続き） ---- */
+.card-head{text-align:center; padding-top:8px}
+.photo{width:120px;height:120px;border-radius:50%;object-fit:cover;
+  border:3px solid var(--card); box-shadow:0 0 0 3px var(--green); margin:0 auto 16px; display:block}
+.chapter{font-size:13px; letter-spacing:.14em; color:var(--mut); margin-bottom:6px}
+.category{display:inline-block; background:var(--cream); color:var(--green);
+  border:1px solid var(--line); border-radius:999px; padding:6px 16px; font-size:13.5px;
+  font-weight:700; letter-spacing:.04em; margin-bottom:14px}
+.name{font-size:26px; font-weight:700; margin:0 0 4px}
+.kana{font-size:13.5px; color:var(--mut); margin-bottom:14px}
+.tagline{font-size:16.5px; color:var(--ink2); font-weight:600}
+
+/* ---- セクション共通 ---- */
+section{margin-top:36px}
+.sec-title{display:flex; align-items:center; gap:10px; font-size:13px; letter-spacing:.18em;
+  color:var(--green); font-weight:700; margin-bottom:14px}
+.sec-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---- 引用カード（紹介のお願い） ---- */
+.ask-card{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--green);
+  border-radius:10px; padding:22px 20px; font-size:16.5px; line-height:1.8; color:var(--ink)}
+
+/* ---- 番号リスト ---- */
+.numlist{list-style:none; margin:0; padding:0; counter-reset:n}
+.numlist li{counter-increment:n; display:grid; grid-template-columns:28px 1fr; gap:10px;
+  padding:12px 0; border-bottom:1px solid var(--line); font-size:15.5px; color:var(--ink2)}
+.numlist li:last-child{border-bottom:none}
+.numlist li::before{content:counter(n); font-family:var(--fm); font-weight:700; color:var(--green); font-size:16px}
+.note{font-size:13.5px; color:var(--mut); margin-top:12px}
+
+/* ---- CTA ---- */
+.cta-box{text-align:center; background:var(--cream); border:1px solid var(--line);
+  border-radius:14px; padding:26px 18px; margin-top:14px}
+.cta-btn{display:inline-block; background:var(--green); color:#FFFFFF !important; text-decoration:none;
+  font-weight:700; font-size:17px; letter-spacing:.03em; padding:16px 30px; border-radius:999px;
+  box-shadow:0 8px 20px rgba(47,93,70,.28)}
+.cta-sub{font-size:13.5px; color:var(--mut); margin-top:14px; margin-bottom:0}
+
+/* ---- 紹介できる専門家（チップ） ---- */
+.give-intro{font-size:14.5px; color:var(--mut); margin-bottom:16px}
+.give-group{margin-bottom:16px}
+.give-field{font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:8px}
+.give-field .cnt{color:var(--mut); font-weight:400; font-size:13px}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{background:var(--card); border:1px solid var(--line); border-radius:999px;
+  padding:6px 13px; font-size:13.5px; color:var(--ink2)}
+
+/* ---- details ---- */
+details{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; margin-bottom:12px}
+details > summary{cursor:pointer; font-weight:700; font-size:15.5px; color:var(--ink); list-style:none;
+  display:flex; align-items:center; justify-content:space-between}
+details > summary::-webkit-details-marker{display:none}
+details > summary::after{content:"▾"; color:var(--green); font-size:13px; margin-left:8px}
+details[open] > summary::after{content:"▴"}
+.gains-block{margin-top:14px}
+.gains-block h4{font-size:12.5px; letter-spacing:.14em; color:var(--green); margin:0 0 8px; font-weight:700}
+.gains-block ul{margin:0 0 14px; padding-left:1.2em}
+.gains-block li{font-size:14.5px; color:var(--ink2); margin-bottom:6px; line-height:1.65}
+.bio-block{margin-top:6px}
+.bio-block dl{margin:0 0 14px}
+.bio-block dt{font-size:12px; color:var(--mut); letter-spacing:.06em; margin-top:10px}
+.bio-block dd{font-size:14.5px; color:var(--ink2); margin:2px 0 0; line-height:1.7}
+
+/* ---- フッター ---- */
+footer{margin-top:48px; padding-top:20px; border-top:1px solid var(--line);
+  font-size:12.5px; color:var(--mut); text-align:center; line-height:1.9}
+footer a{color:var(--mut)}
+
+/* ---- 一覧ページ用 ---- */
+.member-list{list-style:none; margin:0; padding:0; display:grid; gap:14px}
+.member-card{display:flex; align-items:center; gap:16px; background:var(--card);
+  border:1px solid var(--line); border-radius:12px; padding:16px; text-decoration:none}
+.member-card img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.member-card .mc-name{font-weight:700; color:var(--ink); font-size:16px; margin:0 0 2px}
+.member-card .mc-cat{font-size:13px; color:var(--green)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card-head">
+    <img class="photo" src="photo.jpg" alt="成相 裕康">
+    <div class="chapter">BNI 横浜セントラルリージョン 白樺チャプター</div>
+    <div class="category">社長を現場から解放する仕掛け人</div>
+    <h1 class="name">成相 裕康</h1>
+    <div class="kana">（なりあい ひろやす）</div>
+    <p class="tagline">経営者の時間を、1日2時間つくる仕事をしています。</p>
+  </div>
+
+  <section>
+    <div class="sec-title">紹介のお願い</div>
+    <div class="ask-card">飲み会に誘っても来ない。アポはいつもリスケ。そんなクリニックや整体の社長・院長を、僕に会わせてください。まずは1to1から。</div>
+  </section>
+
+  <section>
+    <div class="sec-title">こんな社長をご紹介ください</div>
+    <ol class="numlist"><li>社長が忙しすぎて現場から抜けられない会社</li><li>パソコンやスマホの作業に時間を取られている社長</li><li>「もう少し時間があれば、この社長は本当に伸びるのに」と思う、頑張っている社長</li><li>「自分がやったほうが早い」と言って、結局ぜんぶ自分でやっている経営者</li><li>休みの日もスマホで連絡を返している経営者</li><li>売上は立っているが「これ以上はもう時間が足りない」段階の社長</li></ol>
+    <p class="note">※規模では絞りません。社員5名でも30名でも、社長が現場から抜けられないなら当てはまります。</p>
+  </section>
+
+  <section>
+    <div class="sec-title">1to1を申し込む</div>
+    <div class="cta-box">
+      <a class="cta-btn" href="https://timerex.net/s/tujido.rapport2019_afb5/5daf3edf" target="_blank" rel="noopener">1to1を申し込む（TimeRex）</a>
+      <p class="cta-sub">定例会・Messengerで声をかけてもらえれば、その場で日程を決めます</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">紹介できる専門家（40名・分野）</div>
+    <p class="give-intro">お名前は1to1でお伝えします。探している分野を教えてください。</p>
+    <div class="give-group"><div class="give-field">カウンセリング・コーチング <span class="cnt">（5名）</span></div><div class="chips"><span class="chip">カウンセラーコーチ</span><span class="chip">心理カウンセラー</span><span class="chip">性のカウンセラー</span><span class="chip">ライフコンサルタント</span></div></div><div class="give-group"><div class="give-field">SNS・Web集客・広告 <span class="cnt">（7名）</span></div><div class="chips"><span class="chip">SNSマーケッター</span><span class="chip">SNS集客（地方創生）</span><span class="chip">web広告（整体院系）</span><span class="chip">小規模店舗集客</span><span class="chip">WEBコンサルタント（整体院オーナー兼）</span></div></div><div class="give-group"><div class="give-field">制作 <span class="cnt">（6名）</span></div><div class="chips"><span class="chip">web制作</span><span class="chip">動画制作</span><span class="chip">映像クリエイター</span><span class="chip">ロゴ制作</span><span class="chip">プロデューサー</span><span class="chip">Notionインストラクター</span></div></div><div class="give-group"><div class="give-field">治療・ボディケア・美容 <span class="cnt">（4名）</span></div><div class="chips"><span class="chip">足揉みインストラクター</span><span class="chip">フットケアマイスター</span><span class="chip">育毛スクール</span><span class="chip">ネイルサロンFCオーナー</span></div></div><div class="give-group"><div class="give-field">店舗・サロンオーナー <span class="cnt">（5名）</span></div><div class="chips"><span class="chip">FC店舗オーナー</span><span class="chip">店舗オーナー</span><span class="chip">ペットショップ店長</span></div></div><div class="give-group"><div class="give-field">飲食 <span class="cnt">（3名）</span></div><div class="chips"><span class="chip">創作和食</span><span class="chip">イタリアンバル</span><span class="chip">飲食店オーナー</span></div></div><div class="give-group"><div class="give-field">士業・お金まわり <span class="cnt">（4名）</span></div><div class="chips"><span class="chip">会計士</span><span class="chip">行政書士</span><span class="chip">終活コーディネーター</span><span class="chip">保険代理店</span></div></div><div class="give-group"><div class="give-field">車・建設・住宅 <span class="cnt">（4名）</span></div><div class="chips"><span class="chip">車の買取＆修理</span><span class="chip">車修理工場</span><span class="chip">建設</span><span class="chip">リフォーム</span></div></div><div class="give-group"><div class="give-field">その他 <span class="cnt">（2名）</span></div><div class="chips"><span class="chip">四柱推命</span><span class="chip">ゴルフレッスンコーチ</span></div></div>
+  </section>
+
+  <section>
+    <div class="sec-title">G.A.I.N.S.</div>
+    <details open>
+      <summary>Goals / Accomplishments / Interests / Networks / Skills</summary>
+      
+      <div class="gains-block">
+        <h4>GOALS｜目標</h4><ul><li>【1年で】時短支援の事業を、店舗事業（整体院）と同じ規模の売上まで育てる。店舗をやめても成り立つ状態にする</li><li>リファーラルは毎月最低5件、目標は毎月10件</li><li>BNIから時短支援のクライアントをつくり、事例を増やす</li><li>【これから先】55歳までに、暖かいところでの拠点生活。寒いのが苦手なので、夏と夏を行き来する暮らしをする</li><li>茅ヶ崎・沖縄・海外に拠点を持ち、好きな時に好きな場所で働ける状態をつくる</li><li>自分の整体院を、自分が現場にいなくても回る状態のまま続ける</li><li>家族との時間、人との時間を大切にする</li></ul>
+        <h4>ACCOMPLISHMENTS｜実績</h4><ul><li>【自分の院で】一人整体院を14年経営。現役の院長（神奈川県藤沢市辻堂）</li><li>単価35,000円・週休3日で、月商300万円を10年間一度も切っていない</li><li>もともと「パソコンが苦手といえば僕」と言われるアナログ人間だった</li><li>時間に追われる状態から自分自身が抜けた。心とお金と時間にゆとりができた（これが今の仕事の原点）</li><li>事務作業を月40時間削減。週休3日と、夏の10連休を実現</li><li>SNS投稿を3アカウント、企画から執筆・検品・投稿まで全自動で運用中</li><li>LINEでお客様対応をするAIを商用で運用中</li><li>【クライアントで】「もう限界」だった院長が独立し、月商100万円以下から1年で300万円に（2件）</li><li>時短の手順もあわせて指導し、一人でできることが増えて外注費が年間100万円以上下がった</li><li>「もう限界」の院長が3ヶ月で月商250万円→320万円</li><li>一人院で月商300万円を突破</li><li>【資格】Soleado プロコーチ資格</li></ul>
+        <h4>INTERESTS｜興味・関心</h4><ul><li>波乗り（サーフィン）</li><li>富士登山（年1回）</li><li>家族との車中泊での国内旅行</li><li>海外旅行</li><li>AIで時短して、自分の時間をつくること</li><li>人と過ごす時間を大切にすること</li><li>気になるニュースは地球温暖化</li></ul>
+        <h4>NETWORKS｜人脈</h4><ul><li>整体院・治療院の経営者ネットワーク（同業の横のつながり）</li><li>Web制作の事業者</li><li>SNS運用・リール動画制作の事業者</li><li>LINE公式アカウント設計の事業者</li><li>湘南（茅ヶ崎・辻堂）に24〜25年のローカルなつながり</li><li>前職（花王販売株式会社）時代のつながり</li></ul>
+        <h4>SKILLS｜スキル</h4><ul><li>AI導入（SNS投稿・顧客対応・書類づくりの自動化。設定はすべてこちらで行います）</li><li>業務の棚卸し（「やめていい仕事」と「渡していい仕事」を分ける）</li><li>コーチング（Soleado プロコーチ資格。仕組みを入れても動かない原因を対話で外す）</li><li>整体の施術と一人院経営（14年）</li><li>LP制作・Meta広告運用・Googleビジネスプロフィール運用</li></ul>
+      </div>
+    
+    </details>
+  </section>
+
+  <section>
+    <div class="sec-title">略歴</div>
+    <details open>
+      <summary>ビジネス・個人・その他</summary>
+      
+      <div class="bio-block">
+        <h4 style="font-size:12.5px;letter-spacing:.14em;color:var(--green);margin:14px 0 8px;font-weight:700">ビジネス</h4>
+        <dl><dt>事業名</dt><dd>ラポール美容整体院／合同会社UPLINK</dd><dt>専門分野</dt><dd>社長を現場から解放する仕掛け人（経営者の時間を1日2時間つくる）</dd><dt>所在地</dt><dd>神奈川県藤沢市辻堂</dd><dt>経験年数</dt><dd>一人整体院の経営14年</dd><dt>過去の職業</dt><dd>花王販売株式会社</dd></dl>
+        <h4 style="font-size:12.5px;letter-spacing:.14em;color:var(--green);margin:14px 0 8px;font-weight:700">個人</h4>
+        <dl><dt>家族</dt><dd>妻・長女13歳（中1）・長男（小2）</dd><dt>趣味</dt><dd>波乗り（サーフィン）／年1回の富士登山／家族との車中泊旅行／海外旅行</dd><dt>関心事</dt><dd>AIでどれだけ時短して自分の時間をつくるか。人との時間を大切にすること。気になるニュースは地球温暖化</dd><dt>出身地</dt><dd>東京</dd><dt>居住地</dt><dd>神奈川県茅ヶ崎市（4年目。隣の辻堂に20年近く・湘南は通算24〜25年）</dd></dl>
+        <h4 style="font-size:12.5px;letter-spacing:.14em;color:var(--green);margin:14px 0 8px;font-weight:700">その他</h4>
+        <dl><dt>強い願望</dt><dd>じっとしていられない、今日この頃のADHDです。茅ヶ崎・沖縄・海外と拠点を複数持ち、好きな時に好きな場所で仕事をして、好きなことをやりたいです。</dd><dt>誰も知らない私</dt><dd>あんまり仕事をしたくありません。お店のことはもちろんしっかりやりますが、できれば何もせず、海で波乗りをして、帰ってビールを飲む。その生活がずっと続いたら最高だと思っています。</dd><dt>成功の鍵</dt><dd>「自分がやったほうが早い」を手放したこと。パソコンが苦手なままでも、仕組みに渡せば回ると分かったこと。</dd></dl>
+      </div>
+    
+    </details>
+  </section>
+
+  <footer>
+    合同会社UPLINK<br>
+    <a href="https://hiro0183.github.io/uplink-lp/" target="_blank" rel="noopener">https://hiro0183.github.io/uplink-lp/</a><br>
+    更新日 2026-09-15<br>
+    このページはBNIメンバー向けです（検索には出しません）
+  </footer>
+
+</div>
+</body>
+</html>
