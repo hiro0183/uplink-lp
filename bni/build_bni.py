@@ -163,6 +163,8 @@ def render_member_page(m):
         f"<li>{esc(t)}</li>" for t in m.get("referral_targets", [])
     )
     referral_note = m.get("referral_note", "")
+    referral_main = m.get("referral_main", "")
+    action_request = m.get("action_request", "")
 
     # 紹介できる専門家
     give_groups = ""
@@ -263,9 +265,16 @@ def render_member_page(m):
 
   <section>
     <div class="sec-title">こんな社長をご紹介ください</div>
+    {f'<p><strong>本命はこれ1つです：{esc(referral_main)}</strong></p>' if referral_main else ''}
+    {'<p class="sec-title" style="margin-top:0">こんな様子が見えたら、その社長です</p>' if referral_main else ''}
     <ol class="numlist">{referral_items}</ol>
     {f'<p class="note">※{esc(referral_note)}</p>' if referral_note else ''}
   </section>
+
+  {f'''<section>
+    <div class="sec-title">見込み客に、こう言ってください</div>
+    <div class="ask-card">{esc(action_request)}</div>
+  </section>''' if action_request else ''}
 
   <section>
     <div class="sec-title">1to1を申し込む</div>
