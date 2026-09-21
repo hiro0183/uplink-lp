@@ -1,0 +1,9 @@
+# --- secrets (added 2026-09-21, PC recovery) ---
+.env
+.env.*
+tokens.json
+tokens.json.*
+*secret*
+*credential*
+*.pem
+*.key
