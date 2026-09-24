@@ -165,6 +165,8 @@ def render_member_page(m):
     referral_note = m.get("referral_note", "")
     referral_main = m.get("referral_main", "")
     action_request = m.get("action_request", "")
+    referral_partners = m.get("referral_partners", [])
+    referral_partners_items = "".join(f"<li>{esc(t)}</li>" for t in referral_partners)
 
     # 紹介できる専門家
     give_groups = ""
@@ -185,9 +187,15 @@ def render_member_page(m):
         items = gains.get(key, [])
         return "".join(f"<li>{esc(i)}</li>" for i in items)
 
+    work_steps_html = (
+        f"<h4>仕事の中身（3ステップ）｜「社長を現場から解放する」とは具体的に何をするか</h4><ul>{gains_ul('work_steps')}</ul>"
+        if gains.get("work_steps") else ""
+    )
+
     gains_html = f"""
       <div class="gains-block">
         <h4>GOALS｜目標</h4><ul>{gains_ul('goals')}</ul>
+        {work_steps_html}
         <h4>ACCOMPLISHMENTS｜実績</h4><ul>{gains_ul('accomplishments')}</ul>
         <h4>INTERESTS｜興味・関心</h4><ul>{gains_ul('interests')}</ul>
         <h4>NETWORKS｜人脈</h4><ul>{gains_ul('networks')}</ul>
@@ -265,10 +273,13 @@ def render_member_page(m):
 
   <section>
     <div class="sec-title">こんな社長をご紹介ください</div>
+    {'<p class="note" style="margin-top:0">【お客さんとして】</p>' if referral_partners else ''}
     {f'<p><strong>本命はこれ1つです：{esc(referral_main)}</strong></p>' if referral_main else ''}
     {'<p class="sec-title" style="margin-top:0">こんな様子が見えたら、その社長です</p>' if referral_main else ''}
     <ol class="numlist">{referral_items}</ol>
     {f'<p class="note">※{esc(referral_note)}</p>' if referral_note else ''}
+    {f'''<p class="sec-title" style="margin-top:22px">【一緒に組む方として】</p>
+    <ol class="numlist">{referral_partners_items}</ol>''' if referral_partners else ''}
   </section>
 
   {f'''<section>
