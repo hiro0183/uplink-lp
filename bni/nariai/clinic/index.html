@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自由診療の一人院長の方へ｜成相 裕康</title>
+<meta name="description" content="自由診療のクリニック・治療院・サロンを一人で回している院長の方へ。診療以外の時間を、仕組みに渡して取り戻す方法をお伝えします。">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="自由診療の一人院長の方へ｜成相 裕康">
+<meta property="og:description" content="診療以外の時間を、仕組みに渡して取り戻す。まずは無料で1回、一緒に見ます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F3E8; --card:#FFFFFF; --line:#DCD6BF;
+  --ink:#1F3329; --ink2:#3E5548; --mut:#71806F;
+  --green:#2F5D46; --greend:#1D3A2C; --cream:#F1EAD3;
+  --accent:#2F5D46;
+  --ff:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  --fm:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#12201A; --card:#1A2C24; --line:#2E4438;
+    --ink:#EDF3EC; --ink2:#C8D6C9; --mut:#8FA192;
+    --green:#7FD1A8; --greend:#0E1913; --cream:#20302A;
+    --accent:#7FD1A8;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--ff);
+  font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:640px;margin:0 auto;padding:28px 20px 56px}
+a{color:var(--green)}
+h1,h2,h3{font-family:var(--fm); color:var(--ink); line-height:1.5; letter-spacing:.02em}
+p{margin:0 0 1em}
+
+/* ---- ヘッダー（名刺の続き） ---- */
+.card-head{text-align:center; padding-top:8px}
+.photo{width:120px;height:120px;border-radius:50%;object-fit:cover;
+  border:3px solid var(--card); box-shadow:0 0 0 3px var(--green); margin:0 auto 16px; display:block}
+.chapter{font-size:13px; letter-spacing:.14em; color:var(--mut); margin-bottom:6px}
+.category{display:inline-block; background:var(--cream); color:var(--green);
+  border:1px solid var(--line); border-radius:999px; padding:6px 16px; font-size:13.5px;
+  font-weight:700; letter-spacing:.04em; margin-bottom:14px}
+.name{font-size:26px; font-weight:700; margin:0 0 4px}
+.kana{font-size:13.5px; color:var(--mut); margin-bottom:14px}
+.tagline{font-size:16.5px; color:var(--ink2); font-weight:600}
+
+/* ---- セクション共通 ---- */
+section{margin-top:36px}
+.sec-title{display:flex; align-items:center; gap:10px; font-size:13px; letter-spacing:.18em;
+  color:var(--green); font-weight:700; margin-bottom:14px}
+.sec-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---- 引用カード（紹介のお願い） ---- */
+.ask-card{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--green);
+  border-radius:10px; padding:22px 20px; font-size:16.5px; line-height:1.8; color:var(--ink)}
+
+/* ---- 番号リスト ---- */
+.numlist{list-style:none; margin:0; padding:0; counter-reset:n}
+.numlist li{counter-increment:n; display:grid; grid-template-columns:28px 1fr; gap:10px;
+  padding:12px 0; border-bottom:1px solid var(--line); font-size:15.5px; color:var(--ink2)}
+.numlist li:last-child{border-bottom:none}
+.numlist li::before{content:counter(n); font-family:var(--fm); font-weight:700; color:var(--green); font-size:16px}
+.note{font-size:13.5px; color:var(--mut); margin-top:12px}
+
+/* ---- CTA ---- */
+.cta-box{text-align:center; background:var(--cream); border:1px solid var(--line);
+  border-radius:14px; padding:26px 18px; margin-top:14px}
+.cta-btn{display:inline-block; background:var(--green); color:#FFFFFF !important; text-decoration:none;
+  font-weight:700; font-size:17px; letter-spacing:.03em; padding:16px 30px; border-radius:999px;
+  box-shadow:0 8px 20px rgba(47,93,70,.28)}
+.cta-sub{font-size:13.5px; color:var(--mut); margin-top:14px; margin-bottom:0}
+
+/* ---- 紹介できる専門家（チップ） ---- */
+.give-intro{font-size:14.5px; color:var(--mut); margin-bottom:16px}
+.give-group{margin-bottom:16px}
+.give-field{font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:8px}
+.give-field .cnt{color:var(--mut); font-weight:400; font-size:13px}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{background:var(--card); border:1px solid var(--line); border-radius:999px;
+  padding:6px 13px; font-size:13.5px; color:var(--ink2)}
+
+/* ---- details ---- */
+details{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; margin-bottom:12px}
+details > summary{cursor:pointer; font-weight:700; font-size:15.5px; color:var(--ink); list-style:none;
+  display:flex; align-items:center; justify-content:space-between}
+details > summary::-webkit-details-marker{display:none}
+details > summary::after{content:"▾"; color:var(--green); font-size:13px; margin-left:8px}
+details[open] > summary::after{content:"▴"}
+.gains-block{margin-top:14px}
+.gains-block h4{font-size:12.5px; letter-spacing:.14em; color:var(--green); margin:0 0 8px; font-weight:700}
+.gains-block ul{margin:0 0 14px; padding-left:1.2em}
+.gains-block li{font-size:14.5px; color:var(--ink2); margin-bottom:6px; line-height:1.65}
+.bio-block{margin-top:6px}
+.bio-block dl{margin:0 0 14px}
+.bio-block dt{font-size:12px; color:var(--mut); letter-spacing:.06em; margin-top:10px}
+.bio-block dd{font-size:14.5px; color:var(--ink2); margin:2px 0 0; line-height:1.7}
+
+/* ---- フッター ---- */
+footer{margin-top:48px; padding-top:20px; border-top:1px solid var(--line);
+  font-size:12.5px; color:var(--mut); text-align:center; line-height:1.9}
+footer a{color:var(--mut)}
+
+/* ---- 一覧ページ用 ---- */
+.member-list{list-style:none; margin:0; padding:0; display:grid; gap:14px}
+.member-card{display:flex; align-items:center; gap:16px; background:var(--card);
+  border:1px solid var(--line); border-radius:12px; padding:16px; text-decoration:none}
+.member-card img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.member-card .mc-name{font-weight:700; color:var(--ink); font-size:16px; margin:0 0 2px}
+.member-card .mc-cat{font-size:13px; color:var(--green)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card-head">
+    <img class="photo" src="../photo.jpg" alt="成相 裕康">
+    <div class="chapter">BNI 横浜セントラルリージョン 白樺チャプター</div>
+    <div class="category">社長を現場から解放する仕掛け人</div>
+    <h1 class="name">成相 裕康</h1>
+    <div class="kana">（なりあい ひろやす）</div>
+    <p class="tagline">自由診療の一人院長の、診療以外の時間を取り戻す仕事をしています。</p>
+  </div>
+
+  <section>
+    <div class="sec-title">診療の外の時間を、先生の手元へ</div>
+    <div class="ask-card">患者さんに合わせて診ていると、夜は気づけば遅くなる。記録や事務、情報発信といった診療の外の仕事を、仕組みに預けて時間を取り戻す方法があります。辻堂で自費の整体院を長く営む僕が、自分でやってきたやり方をお伝えします。</div>
+  </section>
+
+  <section>
+    <div class="sec-title">こんな院長へ</div>
+    <ol class="numlist"><li>予約や問い合わせの電話を、ご家族やスタッフが受けている</li><li>診療が終わってから、説明資料やカウンセリングの記録、請求まわりの事務をしている</li><li>ブログ・SNS・Googleビジネスプロフィールを「やらなきゃ」と思ったまま止まっている</li><li>患者さん一人ひとりに丁寧に向き合うほど、伝え方や集客に使える時間がなくなる</li><li>夜遅くまで診て、休みの日も連絡を返している</li></ol>
+  </section>
+
+  <section>
+    <div class="sec-title">なぜ僕が</div>
+    <p>僕も自費の院を経営する、現役の院長です。辻堂で整骨院を開業し、保険診療から自費の美容整体院へ転換して、14年目の今も現役で施術に立っています。</p>
+    <p>単価35,000円・週休3日で、月商300万円を10年間一度も切っていません。パソコンが苦手と言われていた僕が、請求書・SNS・LINE・記録を仕組みに渡して、事務作業を月40時間減らし、夏に10連休を取れました（売上は保てました）。</p>
+    <p>治療院のクライアントでは、月商100万円以下から1年で300万円になった方が2件。一人でできることが増えて、外注費が年間100万円以上下がった例もあります。すべて、自分で試してから人に渡しています。</p>
+  </section>
+
+  <section>
+    <div class="sec-title">まず、時間の行き先を一緒に見ます</div>
+    <ol class="numlist"><li><span><strong>棚卸し：</strong>院長の1週間を一緒に書き出し、時間がどこに消えているかを見える形にします</span></li><li><span><strong>仕分け：</strong>「やめていい仕事」「人に渡せる仕事」「院長にしかできない仕事」に分けます。「本当は何に時間を使いたいか」も、ここで言葉にします</span></li></ol>
+  </section>
+
+  <section>
+    <div class="sec-title">そのうえで、AI導入という形でお渡しします</div>
+    <p>人に渡せる仕事を、AIの仕組みにして院長にお渡しします。院長は確認するだけの形です。設定はすべてこちらで行います。</p>
+    <p class="note">例えば、こんな仕事を渡せます</p>
+    <ol class="numlist"><li>問い合わせ・予約のLINEでの一次対応</li><li>カウンセリング・説明の録音を文字起こしして、要点と次にやることをまとめる</li><li>Googleビジネスプロフィール・SNSの原稿づくり（院長は確認するだけ）</li><li>請求書やメールの下書きなどの事務</li></ol>
+  </section>
+
+  <section>
+    <div class="sec-title">まずは無料で1回</div>
+    <div class="ask-card">30分〜1時間、お話しさせてください（無料）。院長の1週間を伺って、どこの時間が削減できるかを一緒に見ます。何かを売り込むための時間ではありません。</div>
+    <div class="cta-box">
+      <a class="cta-btn" href="https://timerex.net/s/tujido.rapport2019_afb5/7e5923fa" target="_blank" rel="noopener">無料で話してみる（TimeRex）</a>
+      <p class="cta-sub">日程が合わない場合は、お知らせいただければ調整します</p>
+    </div>
+  </section>
+
+  <footer>
+    合同会社UPLINK<br>
+    <a href="https://hiro0183.github.io/uplink-lp/" target="_blank" rel="noopener">https://hiro0183.github.io/uplink-lp/</a><br>
+    更新日 2026-10-01<br>
+    このページはご紹介いただいた方向けです（検索には出しません）
+  </footer>
+
+</div>
+</body>
+</html>
