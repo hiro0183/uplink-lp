@@ -166,6 +166,9 @@ def render_member_page(m):
     referral_main = m.get("referral_main", "")
     action_request = m.get("action_request", "")
     referral_partners = m.get("referral_partners", [])
+    referral_top_items = "".join(f"<li>{esc(t)}</li>" for t in m.get("referral_top", []))
+    referral_next = m.get("referral_next", "")
+    referral_also_items = "".join(f"<li>{esc(t)}</li>" for t in m.get("referral_also", []))
     referral_partners_items = "".join(f"<li>{esc(t)}</li>" for t in referral_partners)
 
     # 紹介できる専門家
@@ -192,8 +195,14 @@ def render_member_page(m):
         if gains.get("work_steps") else ""
     )
 
+    hitokoto_html = (
+        f"<h4>ひとことで</h4><ul><li>{esc(gains.get('hitokoto'))}</li></ul>"
+        if gains.get("hitokoto") else ""
+    )
+
     gains_html = f"""
       <div class="gains-block">
+        {hitokoto_html}
         <h4>GOALS｜目標</h4><ul>{gains_ul('goals')}</ul>
         {work_steps_html}
         <h4>ACCOMPLISHMENTS｜実績</h4><ul>{gains_ul('accomplishments')}</ul>
@@ -275,9 +284,12 @@ def render_member_page(m):
     <div class="sec-title">こんな社長をご紹介ください</div>
     {'<p class="note" style="margin-top:0">【お客さんとして】</p>' if referral_partners else ''}
     {f'<p><strong>本命はこれ1つです：{esc(referral_main)}</strong></p>' if referral_main else ''}
-    {'<p class="sec-title" style="margin-top:0">こんな様子が見えたら、その社長です</p>' if referral_main else ''}
-    <ol class="numlist">{referral_items}</ol>
     {f'<p class="note">※{esc(referral_note)}</p>' if referral_note else ''}
+    {f'<p class="sec-title" style="margin-top:18px">いちばん力を出せるのは</p><ul>{referral_top_items}</ul>' if referral_top_items else ''}
+    {f'<p class="note" style="margin-top:0">続いて：{esc(referral_next)}</p>' if referral_next else ''}
+    {'<p class="sec-title" style="margin-top:22px">こんな様子が見えたら、その社長です</p>' if referral_main else ''}
+    <ol class="numlist">{referral_items}</ol>
+    {f'<p class="sec-title" style="margin-top:22px">こんな先生も</p><ul>{referral_also_items}</ul>' if referral_also_items else ''}
     {f'''<p class="sec-title" style="margin-top:22px">【一緒に組む方として】</p>
     <ol class="numlist">{referral_partners_items}</ol>''' if referral_partners else ''}
   </section>
