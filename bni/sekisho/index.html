@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
-<style>:root{color-scheme:light}body{margin:0;font:14px/1.5 system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
-</head>
-<body>
-<title>AI関所 士業版</title>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><style>:root{color-scheme:light}body{margin:0;font:14px/1.5 system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>AI関所 士業版</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Shippori+Mincho+B1:wght@600;800&display=swap');
 
@@ -24,19 +15,6 @@
   --redact-bg:#1b1e25;
   --redact-fg:#f2f3f0;
   --focus:#c3301c;
-  --k-person:rgba(195,48,28,.24);
-  --k-company:rgba(40,84,150,.22);
-  --k-phone:rgba(40,130,80,.24);
-  --k-mail:rgba(20,130,140,.24);
-  --k-post:rgba(190,150,20,.30);
-  --k-addr:rgba(190,150,20,.30);
-  --k-num:rgba(195,48,28,.40);
-  --k-bank:rgba(215,120,30,.30);
-  --k-card:rgba(195,48,28,.40);
-  --k-date:rgba(90,100,115,.24);
-  --k-birth:rgba(90,100,115,.34);
-  --k-amount:rgba(90,150,40,.28);
-  --k-manual:rgba(200,60,120,.26);
   --restored:#0f5a2e;
   --restored-bg:rgba(40,130,80,.16);
 }
@@ -54,19 +32,6 @@
     --redact-bg:#e9e8e3;
     --redact-fg:#14161a;
     --focus:#ff8a76;
-    --k-person:rgba(238,106,85,.34);
-    --k-company:rgba(110,160,230,.30);
-    --k-phone:rgba(90,200,140,.30);
-    --k-mail:rgba(70,200,210,.30);
-    --k-post:rgba(230,190,70,.34);
-    --k-addr:rgba(230,190,70,.34);
-    --k-num:rgba(238,106,85,.50);
-    --k-bank:rgba(240,150,70,.36);
-    --k-card:rgba(238,106,85,.50);
-    --k-date:rgba(170,180,195,.28);
-    --k-birth:rgba(170,180,195,.40);
-    --k-amount:rgba(140,210,90,.30);
-    --k-manual:rgba(240,110,170,.34);
     --restored:#8fe0b0;
     --restored-bg:rgba(90,200,140,.20);
     color-scheme:dark;
@@ -85,19 +50,6 @@
   --redact-bg:#e9e8e3;
   --redact-fg:#14161a;
   --focus:#ff8a76;
-  --k-person:rgba(238,106,85,.34);
-  --k-company:rgba(110,160,230,.30);
-  --k-phone:rgba(90,200,140,.30);
-  --k-mail:rgba(70,200,210,.30);
-  --k-post:rgba(230,190,70,.34);
-  --k-addr:rgba(230,190,70,.34);
-  --k-num:rgba(238,106,85,.50);
-  --k-bank:rgba(240,150,70,.36);
-  --k-card:rgba(238,106,85,.50);
-  --k-date:rgba(170,180,195,.28);
-  --k-birth:rgba(170,180,195,.40);
-  --k-amount:rgba(140,210,90,.30);
-  --k-manual:rgba(240,110,170,.34);
   --restored:#8fe0b0;
   --restored-bg:rgba(90,200,140,.20);
   color-scheme:dark;
@@ -111,119 +63,69 @@ body{
   color:var(--ink);
   font-family:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
   font-size:16px;
-  line-height:1.75;
+  line-height:1.7;
 }
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px 56px}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 48px}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 
-/* header */
-.mast{padding:28px 0 18px;display:flex;gap:16px;align-items:center;border-bottom:3px double var(--ink)}
-.hanko{
-  flex:none;width:64px;height:64px;border-radius:50%;
-  border:3px solid var(--vermilion);color:var(--vermilion);
-  display:flex;align-items:center;justify-content:center;
-  font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
-  font-weight:800;font-size:34px;line-height:1;transform:rotate(-6deg);
-}
+.mast{padding:24px 0 16px;border-bottom:3px double var(--ink)}
 .mast h1{
   margin:0;font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
-  font-weight:800;font-size:clamp(26px,5vw,38px);letter-spacing:.06em;line-height:1.25;
+  font-weight:800;font-size:26px;line-height:1.45;letter-spacing:.02em;
 }
-.mast p{margin:4px 0 0;color:var(--ink-soft);font-size:15px}
-
-.notice{
-  margin:18px 0 8px;padding:12px 16px;
-  border:1px solid var(--rule);border-left:5px solid var(--vermilion);
-  background:var(--sheet);font-size:14px;color:var(--ink-soft);
+.mast h1 .hanko{
+  display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;
+  width:34px;height:34px;margin-right:8px;border-radius:50%;
+  border:2.5px solid var(--vermilion);color:var(--vermilion);
+  font-size:20px;line-height:1;transform:rotate(-6deg);
 }
-.notice ul{margin:0;padding-left:1.2em}
-.notice li{margin:2px 0}
-.notice b{color:var(--ink)}
+.mast p{margin:6px 0 0;color:var(--ink-soft);font-size:16px}
 
-/* steps */
-.flow{display:flex;flex-wrap:wrap;gap:8px 20px;margin:14px 0 4px;padding:0;list-style:none;font-size:14px;color:var(--ink-soft)}
-.flow li{display:flex;align-items:center;gap:8px}
-.flow .n{
-  width:24px;height:24px;border-radius:50%;border:2px solid var(--vermilion);color:var(--vermilion);
-  display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;
-}
-
-.step{margin-top:28px;border-top:2px solid var(--ink);padding-top:14px}
+.step{margin-top:26px}
 .step h2{
-  margin:0 0 6px;display:flex;align-items:center;gap:12px;
+  margin:0 0 8px;
   font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
-  font-weight:800;font-size:22px;letter-spacing:.04em;
+  font-weight:800;font-size:22px;letter-spacing:.03em;
 }
-.step h2 .stamp{
-  flex:none;width:34px;height:34px;border-radius:50%;
-  background:var(--vermilion);color:var(--vermilion-ink);
-  display:inline-flex;align-items:center;justify-content:center;
-  font-family:"BIZ UDPGothic",sans-serif;font-size:17px;font-weight:700;
-}
-.lead{margin:0 0 12px;color:var(--ink-soft);font-size:14px}
-.badge{
-  display:inline-block;margin-left:8px;padding:0 8px;border:1px solid var(--vermilion);color:var(--vermilion);
-  font-family:"BIZ UDPGothic",sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;vertical-align:middle;
-}
-
-.grid2{display:grid;grid-template-columns:1fr;gap:16px}
-@media (min-width:860px){.grid2{grid-template-columns:3fr 2fr}.grid2.even{grid-template-columns:1fr 1fr}}
-.field label,.field .lbl{display:block;font-weight:700;font-size:14px;margin-bottom:4px}
-.field .hint{font-weight:400;color:var(--ink-soft);font-size:13px}
+.sub{margin:0 0 6px;font-size:16px;color:var(--ink-soft)}
 
 textarea{
-  display:block;width:100%;margin:0;padding:10px 12px;
-  font:inherit;font-size:15px;line-height:1.8;color:var(--ink);
+  display:block;width:100%;margin:0;padding:12px;
+  font:inherit;font-size:16px;line-height:1.8;color:var(--ink);
   border:1px solid var(--rule);border-radius:2px;resize:vertical;
   background-color:var(--sheet);
-  background-image:linear-gradient(to bottom,transparent calc(1.8em - 1px),var(--rule-soft) 1px);
-  background-size:100% 1.8em;background-attachment:local;
   overflow-wrap:anywhere;
 }
-#srcText{min-height:22rem}
-#rosterText{min-height:10rem}
-#replyText{min-height:10rem}
+#srcText{min-height:15rem}
+#rosterText{min-height:7rem}
+#replyText{min-height:9rem}
 
-.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .btn{
-  min-height:44px;padding:8px 16px;border:1.5px solid var(--ink);border-radius:2px;
-  background:var(--sheet);color:var(--ink);font:inherit;font-size:15px;font-weight:700;cursor:pointer;
+  min-height:48px;padding:8px 16px;border:1.5px solid var(--ink);border-radius:2px;
+  background:var(--sheet);color:var(--ink);font:inherit;font-size:18px;font-weight:700;cursor:pointer;
 }
 .btn:hover{background:var(--rule-soft)}
+.btn.big{display:block;width:100%;min-height:64px;font-size:22px;letter-spacing:.2em;margin-top:14px}
+.btn.copy{display:block;width:100%;min-height:58px;margin-top:12px;font-size:20px}
 .btn.primary{background:var(--vermilion);border-color:var(--vermilion);color:var(--vermilion-ink)}
 .btn.primary:hover{filter:brightness(1.08)}
 .btn.ink{background:var(--ink);color:var(--paper)}
 .btn.ink:hover{filter:brightness(1.2)}
-
-.opts{display:flex;flex-wrap:wrap;gap:6px 24px;margin:12px 0}
-.opts label{display:flex;align-items:center;gap:8px;font-size:15px;cursor:pointer;min-height:36px}
-.opts input{width:20px;height:20px;accent-color:var(--vermilion);flex:none}
+.btn.block{display:block;width:100%;margin-top:10px}
+.textbtn{
+  display:inline-block;margin:0 0 6px;padding:6px 0;border:0;background:none;
+  color:var(--ink-soft);font:inherit;font-size:16px;text-decoration:underline;cursor:pointer;
+}
+.textbtn:hover{color:var(--ink)}
+.row{display:flex;justify-content:flex-end}
 
 .panel{
   background:var(--sheet);border:1px solid var(--rule);border-radius:2px;
-  padding:12px 14px;min-height:8rem;
+  padding:12px 14px;min-height:7rem;
   white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;
-  font-size:15px;line-height:1.9;max-height:30rem;overflow:auto;
+  font-size:16px;line-height:1.95;
 }
-.panel.out{max-height:none}
-.sub{margin:18px 0 6px;font-size:15px;font-weight:700;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
-.sub .note{font-weight:400;font-size:13px;color:var(--ink-soft)}
-
-.hl{padding:1px 0;border-bottom:2px solid currentColor;border-radius:1px}
-.hl.k-person{background:var(--k-person)}
-.hl.k-company{background:var(--k-company)}
-.hl.k-phone{background:var(--k-phone)}
-.hl.k-mail{background:var(--k-mail)}
-.hl.k-post{background:var(--k-post)}
-.hl.k-addr{background:var(--k-addr)}
-.hl.k-num{background:var(--k-num)}
-.hl.k-bank{background:var(--k-bank)}
-.hl.k-card{background:var(--k-card)}
-.hl.k-date{background:var(--k-date)}
-.hl.k-birth{background:var(--k-birth)}
-.hl.k-amount{background:var(--k-amount)}
-.hl.k-manual{background:var(--k-manual)}
-.hl.off{background:transparent;border-bottom:2px dashed var(--rule)}
+.panel .ph{color:var(--ink-soft)}
 
 .tok{
   display:inline-block;padding:0 6px;margin:0 1px;border-radius:2px;
@@ -234,144 +136,91 @@ textarea{
 .warn{background:var(--vermilion-soft);border-bottom:2px dashed var(--vermilion);padding:0 2px}
 
 .summary{
-  margin:10px 0 0;padding:8px 12px;border:1px solid var(--rule);border-left:5px solid var(--ink);
-  background:var(--sheet);font-size:15px;font-weight:700;overflow-wrap:anywhere;
+  margin:10px 0 0;padding:10px 12px;border-left:5px solid var(--ink);
+  background:var(--sheet);font-size:16px;font-weight:700;overflow-wrap:anywhere;
 }
-.summary span{font-weight:400;color:var(--ink-soft);font-size:13px}
-
-ul.dets{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
-ul.dets li{border-bottom:1px solid var(--rule-soft)}
-ul.dets label{
-  display:grid;grid-template-columns:auto auto 1fr;gap:4px 10px;align-items:center;
-  padding:8px 4px;cursor:pointer;min-height:44px;
-}
-ul.dets input{width:20px;height:20px;accent-color:var(--vermilion);margin:0}
-.chip{display:inline-block;padding:0 8px;font-size:12px;font-weight:700;border:1px solid var(--rule);border-radius:2px;white-space:nowrap}
-.chip.k-person{background:var(--k-person)}
-.chip.k-company{background:var(--k-company)}
-.chip.k-phone{background:var(--k-phone)}
-.chip.k-mail{background:var(--k-mail)}
-.chip.k-post,.chip.k-addr{background:var(--k-addr)}
-.chip.k-num,.chip.k-card{background:var(--k-num)}
-.chip.k-bank{background:var(--k-bank)}
-.chip.k-date{background:var(--k-date)}
-.chip.k-birth{background:var(--k-birth)}
-.chip.k-amount{background:var(--k-amount)}
-.chip.k-manual{background:var(--k-manual)}
-.dets .vals{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;min-width:0;overflow-wrap:anywhere}
-.dets .orig{min-width:0;overflow-wrap:anywhere}
-.dets .arrow{color:var(--ink-soft)}
-.dets .cnt{font-size:12px;color:var(--ink-soft)}
-.dets .off .orig{text-decoration:line-through;text-decoration-color:var(--rule)}
-.empty{padding:12px 4px;color:var(--ink-soft);font-size:14px}
-
-.status{min-height:1.6em;margin:8px 0 0;font-size:14px;font-weight:700;color:var(--restored)}
+.status{min-height:1.7em;margin:8px 0 0;font-size:16px;font-weight:700;color:var(--restored)}
 .status.err{color:var(--vermilion)}
+
+details{margin-top:18px;border:1px solid var(--rule);background:var(--sheet);border-radius:2px}
+details>summary{
+  min-height:52px;padding:12px 14px;cursor:pointer;font-size:18px;font-weight:700;
+  display:flex;align-items:center;
+}
+details[open]>summary{border-bottom:1px solid var(--rule-soft)}
+.inner{padding:14px}
+.inner label.lbl{display:block;font-weight:700;font-size:16px;margin:0 0 6px}
+.inner .res{margin-top:14px}
+.opt{display:flex;align-items:center;gap:12px;font-size:17px;cursor:pointer;min-height:48px;margin:6px 0}
+.opt input{width:24px;height:24px;accent-color:var(--vermilion);flex:none}
+.hint{margin:0 0 8px;color:var(--ink-soft);font-size:15px}
+.setgap{margin-top:16px;padding-top:12px;border-top:1px solid var(--rule-soft)}
 
 .sweep{animation:sweep .7s ease-out}
 @keyframes sweep{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 @media (prefers-reduced-motion: reduce){.sweep{animation:none}}
 
-.foot{margin-top:40px;padding-top:12px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft)}
+.foot{margin-top:32px;padding-top:12px;border-top:1px solid var(--rule);font-size:14px;color:var(--ink-soft)}
 </style>
 
 <div class="wrap">
   <header class="mast">
-    <div class="hanko" aria-hidden="true">関</div>
-    <div>
-      <h1>AI関所　士業版</h1>
-      <p>AIに渡す前に、書類の個人情報を消す・仮の名前に置き換える。（デモ・サンプルはすべて架空）</p>
-    </div>
+    <h1><span class="hanko" aria-hidden="true">関</span>AIに貼る前に、名前や番号を隠します</h1>
+    <p>この画面の中だけで処理します。どこにも送りません</p>
   </header>
 
-  <aside class="notice" aria-label="ご利用上の注意">
-    <ul>
-      <li><b>この画面の処理はすべてお使いのブラウザの中で行い、どこにも送信していません。</b></li>
-      <li>対応表はこの画面を閉じると消えます。</li>
-      <li>自動検出に取りこぼしゼロの保証はありません。送る前に必ず目で確認してください。</li>
-    </ul>
-  </aside>
-
-  <ol class="flow" aria-label="3ステップ">
-    <li><span class="n">1</span>元の書類</li>
-    <li><span class="n">2</span>関所を通す</li>
-    <li><span class="n">3</span>AIの返事を元に戻す</li>
-  </ol>
-
-  <!-- STEP 1 -->
   <section class="step" aria-labelledby="h1">
-    <h2 id="h1"><span class="stamp">1</span>元の書類<span class="badge">サンプル（架空）</span></h2>
-    <p class="lead">顧問先の相談メモを貼り付けます。最初から入っているのは架空のサンプルです。</p>
-    <div class="grid2">
-      <div class="field">
-        <label for="srcText">相談メモ（ここに書類の文章）</label>
-        <textarea id="srcText" spellcheck="false" autocomplete="off"></textarea>
-      </div>
-      <div class="field">
-        <label for="rosterText">名簿 <span class="hint">顧問先・従業員の名前を1行1人で（苗字と名前の間は空白）</span></label>
-        <textarea id="rosterText" spellcheck="false" autocomplete="off"></textarea>
-        <p class="lead" style="margin-top:6px">名簿に入れた名前は、苗字だけで出てきても同じ人として扱います。</p>
-      </div>
-    </div>
-    <div class="btns">
-      <button type="button" class="btn" id="btnSample">サンプルを戻す</button>
-      <button type="button" class="btn" id="btnClear">クリア</button>
-    </div>
+    <h2 id="h1">① 文章を貼る</h2>
+    <button type="button" class="textbtn" id="btnClearSample">サンプルを消す</button>
+    <textarea id="srcText" spellcheck="false" autocomplete="off" aria-label="隠したい文章"></textarea>
+    <button type="button" class="btn big primary" id="btnHide">隠す</button>
   </section>
 
-  <!-- STEP 2 -->
   <section class="step" aria-labelledby="h2">
-    <h2 id="h2"><span class="stamp">2</span>関所を通す</h2>
-    <p class="lead">自動で検出し、同じ人・同じ値には同じ記号を付けます。入力すると、すぐに反映されます。</p>
-
-    <div class="opts">
-      <label for="optBirth"><input type="checkbox" id="optBirth" checked>生年月日を年代に丸める（1978年4月3日→1970年代生まれ）</label>
-      <label for="optAmount"><input type="checkbox" id="optAmount">金額も隠す</label>
-    </div>
-    <div class="btns" style="margin-top:0">
-      <button type="button" class="btn primary" id="btnPass">関所を通す</button>
-      <button type="button" class="btn" id="btnManual">本文で選択した文字も隠す</button>
-    </div>
-    <p class="status" id="manualStatus" role="status" aria-live="polite"></p>
-
-    <div class="sub">原文のプレビュー<span class="note">検出した箇所を種類ごとの色で塗っています（点線＝隠さない設定）</span></div>
-    <div class="panel" id="preview" tabindex="0" aria-label="原文のプレビュー"></div>
-
-    <div class="sub">検出一覧<span class="note">チェックを外した項目は隠しません</span></div>
-    <ul class="dets" id="detList" aria-label="検出一覧"></ul>
-
-    <div class="sub">置き換え後の文章<span class="note">AIに渡すのはこちら</span></div>
-    <div class="panel out" id="outText" tabindex="0" aria-label="置き換え後の文章"></div>
+    <h2 id="h2">② 隠した文章</h2>
+    <div class="panel" id="outText" tabindex="0" aria-label="隠した文章"></div>
     <div class="summary" id="summary" aria-live="polite"></div>
-    <div class="btns">
-      <button type="button" class="btn ink" id="btnCopy">AIに渡す文章をコピー</button>
-    </div>
+    <button type="button" class="btn copy ink" id="btnCopy">コピーしてAIに貼る</button>
     <p class="status" id="copyStatus" role="status" aria-live="polite"></p>
   </section>
 
-  <!-- STEP 3 -->
-  <section class="step" aria-labelledby="h3">
-    <h2 id="h3"><span class="stamp">3</span>AIの返事を元に戻す</h2>
-    <p class="lead">AIの返事を貼ると、記号を対応表で本名に戻して表示します。</p>
-    <div class="grid2 even">
-      <div class="field">
-        <label for="replyText">AIの返事（記号入り）</label>
-        <textarea id="replyText" spellcheck="false" autocomplete="off"></textarea>
-        <div class="btns">
-          <button type="button" class="btn" id="btnSampleReply">サンプル返答を入れる</button>
-          <button type="button" class="btn primary" id="btnRestore">本名に戻す</button>
-        </div>
-      </div>
-      <div class="field">
-        <span class="lbl" id="restoredLbl">戻した結果</span>
-        <div class="panel out" id="restoredText" tabindex="0" aria-labelledby="restoredLbl"></div>
+  <details>
+    <summary>AIの返事を本名に戻す</summary>
+    <div class="inner">
+      <label class="lbl" for="replyText">AIの返事を貼る</label>
+      <textarea id="replyText" spellcheck="false" autocomplete="off"></textarea>
+      <button type="button" class="textbtn" id="btnSampleReply" style="margin-top:6px">サンプル返答を入れる</button>
+      <button type="button" class="btn block primary" id="btnRestore">戻す</button>
+      <div class="res">
+        <span class="lbl" style="font-weight:700">戻した結果</span>
+        <div class="panel" id="restoredText" tabindex="0" aria-label="戻した結果"></div>
         <p class="status err" id="restoreStatus" role="status" aria-live="polite"></p>
       </div>
     </div>
-  </section>
+  </details>
+
+  <details>
+    <summary>細かい設定</summary>
+    <div class="inner">
+      <label class="lbl" for="rosterText">名前を確実に隠したい人を1行1人で</label>
+      <p class="hint">苗字と名前の間は空白を入れてください。</p>
+      <textarea id="rosterText" spellcheck="false" autocomplete="off"></textarea>
+
+      <div class="setgap">
+        <label class="opt" for="optBirth"><input type="checkbox" id="optBirth" checked>生年月日を年代に丸める（1978年4月3日 → 1970年代生まれ）</label>
+        <label class="opt" for="optAmount"><input type="checkbox" id="optAmount">金額も隠す</label>
+      </div>
+
+      <div class="setgap">
+        <p class="hint">隠していないものがあれば、上の「① 文章を貼る」でその文字を選んでから、このボタンを押してください。</p>
+        <button type="button" class="btn block" id="btnManual">選んだ文字も隠す</button>
+        <p class="status" id="manualStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </details>
 
   <footer class="foot">
-    デモ用ツールです。サンプルの人物・会社・番号はすべて架空です。検出結果は参考であり、最終確認は必ず人の目で行ってください。
+    自動なので見落としがあります。AIに貼る前に、ざっと目で確認してください。
   </footer>
 </div>
 
@@ -771,58 +620,37 @@ var SAMPLE_REPLY=
 '※この回答は一般的な情報です。最終的な判断は、必ず担当の専門家が行ってください。\n';
 /*PURE-END*/
 
+var KIND_LABEL={'人物':'人の名前','会社':'会社名','電話':'電話','メール':'メール','郵便番号':'郵便番号','住所':'住所','番号':'番号','口座':'口座','カード':'カード','生年月日':'生年月日','日付':'日付','金額':'金額','手動':'手動で追加'};
+
 if(typeof document!=='undefined'){(function(){
   var $=function(id){return document.getElementById(id);};
-  var state={manual:[],disabled:{},last:null,matches:[]};
+  var state={manual:[],last:null};
 
   function say(id,msg,isErr){var el=$(id);el.textContent=msg||'';el.className='status'+(isErr?' err':'');}
   function clear(el){while(el.firstChild)el.removeChild(el.firstChild);}
-  function span(cls,txt,title){var s=document.createElement('span');s.className=cls;s.textContent=txt;if(title)s.title=title;return s;}
+  function span(cls,txt){var s=document.createElement('span');s.className=cls;s.textContent=txt;return s;}
 
-  function renderPreview(text,matches){
-    var box=$('preview');clear(box);var last=0;
-    matches.forEach(function(m){
-      if(m.start>last)box.appendChild(document.createTextNode(text.slice(last,m.start)));
-      var id=m.kind+'|'+m.key;
-      var s=span('hl k-'+KINDS[m.kind].cls+(state.disabled[id]?' off':''),m.raw,m.kind+(m.sub?'（'+m.sub+'）':''));
-      box.appendChild(s);last=m.end;
-    });
-    if(last<text.length)box.appendChild(document.createTextNode(text.slice(last)));
+  function summaryText(res){
+    var counts={};
+    res.groups.forEach(function(g){if(g.enabled)counts[g.kind]=(counts[g.kind]||0)+1;});
+    var parts=[];
+    KIND_ORDER.forEach(function(k){if(counts[k])parts.push(KIND_LABEL[k]+' '+counts[k]+'件');});
+    return parts.length?parts.join('・')+'を隠しました':'';
   }
-  function renderList(res){
-    var ul=$('detList');clear(ul);
-    if(!res.groups.length){var li=document.createElement('li');li.className='empty';li.textContent='検出された項目はありません。';ul.appendChild(li);return;}
-    res.groups.forEach(function(g,i){
-      var li=document.createElement('li');
-      var lab=document.createElement('label');lab.setAttribute('for','det-'+i);
-      if(!g.enabled)lab.className='off';
-      var cb=document.createElement('input');cb.type='checkbox';cb.id='det-'+i;cb.checked=g.enabled;
-      cb.addEventListener('change',function(){
-        if(cb.checked)delete state.disabled[g.id];else state.disabled[g.id]=true;
-        render();
-      });
-      var chip=span('chip k-'+KINDS[g.kind].cls,g.kind+(g.sub?'：'+g.sub:''));
-      var vals=document.createElement('span');vals.className='vals';
-      vals.appendChild(span('orig',g.canon));
-      vals.appendChild(span('arrow','→'));
-      if(g.enabled){vals.appendChild(span(g.oneWay?'tok plain':'tok',g.rep+(g.oneWay?'（戻せません）':'')));}
-      else vals.appendChild(span('cnt','隠さない'));
-      vals.appendChild(span('cnt','×'+g.count));
-      lab.appendChild(cb);lab.appendChild(chip);lab.appendChild(vals);
-      li.appendChild(lab);ul.appendChild(li);
-    });
-  }
-  function renderOut(res){
+  function renderOut(res,empty){
     var box=$('outText');clear(box);
+    var sm=$('summary');
+    if(empty){
+      box.appendChild(span('ph','① に文章を貼って「隠す」を押すと、ここに結果が出ます。'));
+      sm.textContent='';sm.style.display='none';return;
+    }
     res.pieces.forEach(function(p){
       if(p.t==='text')box.appendChild(document.createTextNode(p.s));
       else box.appendChild(span(p.t==='plain'?'tok plain':'tok',p.s));
     });
-    var sm=$('summary');clear(sm);
-    if(res.groups.some(function(g){return g.enabled;})){
-      sm.appendChild(document.createTextNode(res.summary));
-      sm.appendChild(span('',' 　（計'+res.total+'箇所を置き換え）'));
-    }else sm.appendChild(document.createTextNode('置き換えた項目はありません。'));
+    var t=summaryText(res);
+    sm.style.display='';
+    sm.textContent=t||'隠すものは見つかりませんでした。';
   }
   function renderRestore(){
     var reply=$('replyText').value;var box=$('restoredText');clear(box);
@@ -832,15 +660,16 @@ if(typeof document!=='undefined'){(function(){
       if(p.t==='text')box.appendChild(document.createTextNode(p.s));
       else box.appendChild(span(p.t,p.s));
     });
-    if(r.unresolved.length)say('restoreStatus','対応表にない記号があります（赤の点線）：'+r.unresolved.filter(function(v,i,a){return a.indexOf(v)===i;}).join(' '),true);
+    if(r.unresolved.length)say('restoreStatus','名前の置き換え表にない記号があります（赤の点線）：'+r.unresolved.filter(function(v,i,a){return a.indexOf(v)===i;}).join(' '),true);
     else say('restoreStatus','');
   }
   function render(){
     var text=$('srcText').value;
     var matches=detect(text,{roster:$('rosterText').value,manual:state.manual,amount:$('optAmount').checked});
-    var res=apply(text,matches,{disabled:state.disabled,birthRound:$('optBirth').checked});
-    state.last=res;state.matches=matches;
-    renderPreview(text,matches);renderList(res);renderOut(res);renderRestore();
+    var res=apply(text,matches,{disabled:{},birthRound:$('optBirth').checked});
+    state.last=res;
+    renderOut(res,!text.replace(/[\s　]+/g,''));
+    renderRestore();
   }
   function selectNode(node){
     var r=document.createRange();r.selectNodeContents(node);
@@ -849,50 +678,40 @@ if(typeof document!=='undefined'){(function(){
 
   $('srcText').value=SAMPLE_MEMO;
   $('rosterText').value=SAMPLE_ROSTER;
-  ['srcText','rosterText','replyText'].forEach(function(id){$(id).addEventListener('input',render);});
-  ['optBirth','optAmount'].forEach(function(id){$(id).addEventListener('change',render);});
+  ['srcText','rosterText'].forEach(function(id){$(id).addEventListener('input',function(){say('copyStatus','');render();});});
+  ['optBirth','optAmount'].forEach(function(id){$(id).addEventListener('change',function(){say('copyStatus','');render();});});
 
-  $('btnSample').addEventListener('click',function(){
-    $('srcText').value=SAMPLE_MEMO;$('rosterText').value=SAMPLE_ROSTER;
-    state.manual=[];state.disabled={};say('manualStatus','サンプルを戻しました。');render();
+  $('btnClearSample').addEventListener('click',function(){
+    $('srcText').value='';$('rosterText').value='';state.manual=[];
+    say('copyStatus','');say('manualStatus','');render();$('srcText').focus();
   });
-  $('btnClear').addEventListener('click',function(){
-    $('srcText').value='';state.manual=[];state.disabled={};say('manualStatus','');render();$('srcText').focus();
-  });
-  $('btnPass').addEventListener('click',function(){
-    render();
+  $('btnHide').addEventListener('click',function(){
+    say('copyStatus','');render();
     var o=$('outText');o.classList.remove('sweep');void o.offsetWidth;o.classList.add('sweep');
-    say('manualStatus','関所を通しました。検出一覧と置き換え後の文章を確認してください。');
-    if(o.scrollIntoView)o.scrollIntoView({behavior:'smooth',block:'nearest'});
+    if(o.scrollIntoView)o.scrollIntoView({behavior:'smooth',block:'start'});
   });
   $('btnManual').addEventListener('click',function(){
     var src=$('srcText');var sel='';
     if(src.selectionEnd>src.selectionStart)sel=src.value.substring(src.selectionStart,src.selectionEnd);
-    if(!sel){
-      var gs=window.getSelection?window.getSelection():null;
-      if(gs&&gs.rangeCount&&$('preview').contains(gs.anchorNode))sel=gs.toString();
-    }
     sel=sel.replace(/^[\s　]+|[\s　]+$/g,'');
-    if(!sel){say('manualStatus','本文（上の「相談メモ」か原文のプレビュー）で隠したい文字を選択してから押してください。',true);return;}
+    if(!sel){say('manualStatus','先に「① 文章を貼る」の欄で、隠したい文字を選んでから押してください。',true);return;}
     if(state.manual.indexOf(sel)<0)state.manual.push(sel);
-    delete state.disabled['手動|'+sel];
-    say('manualStatus','「'+sel+'」を隠す対象に追加しました（本文中の同じ文字すべて）。');
+    say('manualStatus','「'+sel+'」を隠す対象に加えました。');
     render();
   });
   $('btnCopy').addEventListener('click',function(){
     var t=state.last?state.last.output:'';
-    function fallback(){selectNode($('outText'));say('copyStatus','選択しました。Ctrl+Cでコピー',true);}
+    if(!t){say('copyStatus','コピーする文章がありません。',true);return;}
+    function fallback(){selectNode($('outText'));say('copyStatus','選択しました。長押し（またはCtrl+C）でコピーしてください。',true);}
     if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(t).then(function(){say('copyStatus','コピーしました。送る前に、もう一度目で確認してください。');},fallback);
+      navigator.clipboard.writeText(t).then(function(){say('copyStatus','コピーしました');},fallback);
     }else fallback();
   });
-  $('btnSampleReply').addEventListener('click',function(){$('replyText').value=SAMPLE_REPLY;render();});
+  $('btnSampleReply').addEventListener('click',function(){$('replyText').value=SAMPLE_REPLY;renderRestore();});
   $('btnRestore').addEventListener('click',renderRestore);
+  $('replyText').addEventListener('input',renderRestore);
 
   render();
 })();}
 </script>
-
-</body>
-
-</html>
+</body></html>
