@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成相 裕康｜合同会社UP LINK 代表</title>
+<meta name="description" content="成相 裕康（合同会社UP LINK 代表）の個人ページ。経営者の時間を1日2時間つくる仕事、実績、G.A.I.N.S.をまとめました。">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="成相 裕康｜合同会社UP LINK 代表">
+<meta property="og:description" content="経営者の時間を、1日2時間つくる仕事をしています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F3E8; --card:#FFFFFF; --line:#DCD6BF;
+  --ink:#1F3329; --ink2:#3E5548; --mut:#71806F;
+  --green:#2F5D46; --greend:#1D3A2C; --cream:#F1EAD3;
+  --accent:#2F5D46;
+  --ff:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  --fm:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#12201A; --card:#1A2C24; --line:#2E4438;
+    --ink:#EDF3EC; --ink2:#C8D6C9; --mut:#8FA192;
+    --green:#7FD1A8; --greend:#0E1913; --cream:#20302A;
+    --accent:#7FD1A8;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--ff);
+  font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:640px;margin:0 auto;padding:28px 20px 56px}
+a{color:var(--green)}
+h1,h2,h3{font-family:var(--fm); color:var(--ink); line-height:1.5; letter-spacing:.02em}
+p{margin:0 0 1em}
+
+/* ---- ヘッダー（名刺の続き） ---- */
+.card-head{text-align:center; padding-top:8px}
+.photo{width:120px;height:120px;border-radius:50%;object-fit:cover;
+  border:3px solid var(--card); box-shadow:0 0 0 3px var(--green); margin:0 auto 16px; display:block}
+.chapter{font-size:13px; letter-spacing:.14em; color:var(--mut); margin-bottom:6px}
+.category{display:inline-block; background:var(--cream); color:var(--green);
+  border:1px solid var(--line); border-radius:999px; padding:6px 16px; font-size:13.5px;
+  font-weight:700; letter-spacing:.04em; margin-bottom:14px}
+.name{font-size:26px; font-weight:700; margin:0 0 4px}
+.kana{font-size:13.5px; color:var(--mut); margin-bottom:14px}
+.tagline{font-size:16.5px; color:var(--ink2); font-weight:600}
+
+/* ---- セクション共通 ---- */
+section{margin-top:36px}
+.sec-title{display:flex; align-items:center; gap:10px; font-size:13px; letter-spacing:.18em;
+  color:var(--green); font-weight:700; margin-bottom:14px}
+.sec-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---- 引用カード ---- */
+.ask-card{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--green);
+  border-radius:10px; padding:22px 20px; font-size:16.5px; line-height:1.8; color:var(--ink)}
+
+/* ---- 番号リスト ---- */
+.numlist{list-style:none; margin:0; padding:0; counter-reset:n}
+.numlist li{counter-increment:n; display:grid; grid-template-columns:28px 1fr; gap:10px;
+  padding:12px 0; border-bottom:1px solid var(--line); font-size:15.5px; color:var(--ink2)}
+.numlist li:last-child{border-bottom:none}
+.numlist li::before{content:counter(n); font-family:var(--fm); font-weight:700; color:var(--green); font-size:16px}
+.note{font-size:13.5px; color:var(--mut); margin-top:12px}
+
+/* ---- CTA ---- */
+.cta-box{text-align:center; background:var(--cream); border:1px solid var(--line);
+  border-radius:14px; padding:26px 18px; margin-top:14px}
+.cta-btn{display:inline-block; background:var(--green); color:#FFFFFF !important; text-decoration:none;
+  font-weight:700; font-size:17px; letter-spacing:.03em; padding:16px 30px; border-radius:999px;
+  box-shadow:0 8px 20px rgba(47,93,70,.28)}
+.cta-sub{font-size:13.5px; color:var(--mut); margin-top:14px; margin-bottom:0}
+
+/* ---- details ---- */
+details{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; margin-bottom:12px}
+details > summary{cursor:pointer; font-weight:700; font-size:15.5px; color:var(--ink); list-style:none;
+  display:flex; align-items:center; justify-content:space-between}
+details > summary::-webkit-details-marker{display:none}
+details > summary::after{content:"▾"; color:var(--green); font-size:13px; margin-left:8px}
+details[open] > summary::after{content:"▴"}
+.gains-block{margin-top:14px}
+.gains-block h4{font-size:12.5px; letter-spacing:.14em; color:var(--green); margin:0 0 8px; font-weight:700}
+.gains-block ul{margin:0 0 14px; padding-left:1.2em}
+.gains-block li{font-size:14.5px; color:var(--ink2); margin-bottom:6px; line-height:1.65}
+.bio-block{margin-top:6px}
+.bio-block dl{margin:0 0 14px}
+.bio-block dt{font-size:12px; color:var(--mut); letter-spacing:.06em; margin-top:10px}
+.bio-block dd{font-size:14.5px; color:var(--ink2); margin:2px 0 0; line-height:1.7}
+
+/* ---- フッター ---- */
+footer{margin-top:48px; padding-top:20px; border-top:1px solid var(--line);
+  font-size:12.5px; color:var(--mut); text-align:center; line-height:1.9}
+footer a{color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card-head">
+    <img class="photo" src="photo.jpg" alt="成相 裕康">
+    <div class="chapter">合同会社UP LINK 代表</div>
+    <div class="category">社長を現場から解放する仕掛け人</div>
+    <h1 class="name">成相 裕康</h1>
+    <div class="kana">（なりあい ひろやす）</div>
+    <p class="tagline">経営者の時間を、1日2時間つくる仕事をしています。</p>
+  </div>
+
+  <section>
+    <div class="sec-title">ご挨拶</div>
+    <div class="ask-card">売上はあるのに、時間がない。そんな社長・院長の時間を、1日2時間つくります。業種は問いません。車の整備・板金工場、リフォーム・外構、クリニック・治療院・サロン、士業の一人事務所など、社長ご自身が現場に出ている会社ほど効きます。</div>
+  </section>
+
+  <section>
+    <div class="sec-title">こういう方のお手伝いをしています</div>
+    <p class="note" style="margin-top:0">【お客さんとして】</p>
+    <p><strong>本命はこれ1つです：社長が忙しすぎて現場から抜けられない会社</strong></p>
+    <p class="note">※規模は問いません。一人でも30人でも、社長が現場から抜けられないなら当てはまります。Zoomで全国対応します</p>
+    <p class="sec-title" style="margin-top:18px">いちばん力を出せるのは</p><ul><li>自由診療のクリニック・美容サロン・整体院の院長（一人院長ほど効きます）</li></ul>
+    <p class="note" style="margin-top:0">続いて：士業の一人事務所、車の整備・板金工場、リフォーム・外構。社長ご自身が現場に出ている業種ほど効きます</p>
+    <p class="sec-title" style="margin-top:22px">こんな状態なら、お役に立てます</p>
+    <ol class="numlist"><li>見積や請求書を、社長自身が夜や休日に打っている</li><li>「自分がやったほうが早い」と言って、結局ぜんぶ自分でやっている</li><li>休みの日もスマホで連絡を返している／飲み会に誘っても来ない・アポはいつもリスケ</li><li>SNSやLINEを「やらなきゃ」と思ったまま、何ヶ月も止まっている</li><li>新しく店や拠点を立ち上げて、SNSやホームページを一からつくらないといけない</li><li>売上は立っているのに「もう時間が足りない」／「もう少し時間があれば、もっと伸ばせるのに」</li></ol>
+    <p class="sec-title" style="margin-top:22px">こんな先生も</p><ul><li>AI（ChatGPTなど）が便利なのは分かっているのに、検索にしか使えておらず「自分には仕組みにできない」と思っている、忙しい自営業・士業の先生</li></ul>
+    <p class="sec-title" style="margin-top:22px">【一緒に組む方として】</p>
+    <ol class="numlist"><li>サロン・治療院のコンサルタント、開業コンサル、フランチャイズのコンサル、集客コンサルの会社（仕組みづくりの部分を一緒に担えます）</li><li>整体院・サロンを複数持つオーナー</li><li>デザインを専門にするWeb制作の方（できたサイトの運用・仕組みの部分をこちらで担えます）</li><li>店舗を持つ経営者が集まるコミュニティや勉強会を運営している方</li></ol>
+  </section>
+
+  <section>
+    <div class="sec-title">まずは無料で1回</div>
+    <div class="cta-box">
+      <p>60分、お話しさせてください（無料・Zoom）。1週間の使い方を伺って、どこの時間が削減できるかを一緒に見ます。売り込みはしません。『うちはまだ早い』も立派な答えです。</p>
+      <a class="cta-btn" href="https://timerex.net/s/tujido.rapport2019_afb5/5daf3edf" target="_blank" rel="noopener">無料の棚卸しセッションを予約する（60分）</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">G.A.I.N.S.</div>
+    <details open>
+      <summary>Goals / Accomplishments / Interests / Networks / Skills</summary>
+
+      <div class="gains-block">
+        <h4>ひとことで</h4><ul><li>「時間が足りない」「効率化したい」「もっと自由な時間がほしい」──そんな社長の声を聞いたら、成相を思い出してください</li></ul>
+        <h4>GOALS｜目標</h4><ul><li>【この仕事にたどり着いたわけ】整体院の院長として、自分が現場に立たないと回らない店を長くやってきました</li><li>「自分がやったほうが早い」を手放し、仕事を仕組みとスタッフに渡したら、売上を保ったまま現場から抜けられました</li><li>その手順を、いまはほかの社長に渡しています</li><li>【なぜこの仕事か】時間は有限です。効率化そのものより、空いた時間で「その人が何をしたいか」を叶える仕事がしたい</li><li>47歳になり、自分にもそんなに時間はないと思うようになりました。同じ経営者の力になりたい。</li><li>【1年で】時短支援の事業を、店舗事業（整体院）と同じ規模の売上まで育てる。店舗をやめても成り立つ状態にする</li><li>【これから先】55歳までに暖かいところに拠点を持ち、夏と夏を行き来する暮らしをする（沖縄・海外）</li><li>自分の整体院を、自分が現場にいなくても回る状態のまま続ける。自分がやっていないことは人に売らない、が信条です</li></ul>
+        <h4>仕事の中身（3ステップ）｜「社長を現場から解放する」とは具体的に何をするか</h4><ul><li>① 棚卸し：社長の1週間を一緒に書き出し、時間がどこに消えているかを見える形にします（ここまでが無料の60分ヒアリング。内容を持ち帰り、手放し方の提案をお出しします）</li><li>② 仕分け：「やめていい仕事」「人に渡せる仕事」「社長にしかできない仕事」に分けます。コーチとして、手放せない理由（気持ちの引っかかり）も一緒にほどきます</li><li>③ 仕組みに渡す：渡せる仕事を、AI・外注・スタッフのうち合うものに渡し、社長が確認するだけの形にします。手段はAIに限りません</li><li>【自分の会社で実際に動いている例】請求書：「〇〇さんに◯月分を」と話しかけるだけで、請求書とメールの下書きまでできあがり、自分は確認して送るだけ</li><li>SNS：3アカウントの企画〜投稿を、これまで書いたものを覚えさせたAIが回す（自分はチェックだけ）</li><li>LINE：お客様とのやり取りをAIが一次対応</li><li>記録：打ち合わせの文字起こしから、要点・次にやること・誰に何を繋ぐかまでAIがまとめる（面談の記録も）</li><li>→ パソコンが苦手なままで、事務作業を月40時間減らし、月に10日休めるようになりました（夏は10連休も）</li></ul>
+        <h4>ACCOMPLISHMENTS｜実績</h4><ul><li>【経歴】東京生まれ。柔道整復師の専門学校（学費は自分で稼ぎながら）→ 花王販売で営業を約2年 → 整骨院を開業 → 自費の美容整体院として14年目の今も現役の院長</li><li>【自分の会社で。すべて自分で試してから、人に渡しています】単価35,000円・週休3日で、月商300万円を10年間一度も切っていない</li><li>「パソコンが苦手といえば僕」と言われたアナログ人間が、AIのおかげで事務作業を月40時間減らし、月10日の休みと夏の10連休を実現（売上は保てました）</li><li>時間に追われる状態から自分自身が抜けた。心とお金と時間にゆとりができた（これが今の仕事の原点）</li><li>【クライアントで（治療院です。手順は業種を問いません）】「もう限界」の経営者が3ヶ月で月商250万円→320万円</li><li>【資格】Soleado プロコーチ資格。コーチング・カウンセリング・心の学びも積んできたので、仕組みを入れても動かない原因を対話で外せます</li></ul>
+        <h4>INTERESTS｜興味・関心</h4><ul><li>波乗り（波があれば毎朝、海に入ってから仕事へ）</li><li>富士登山（一緒に登れる方、募集中）</li><li>暇があればAIと喋っています</li></ul>
+        <h4>NETWORKS｜人脈</h4><ul><li>店舗経営に関することなら、14年かけて選び抜いてきた外注先をご紹介できます。信頼できる専門家のリストがあります（Web制作／SNS運用・動画・ロゴ／LINE公式アカウント設計／会計士・行政書士などお金まわり／リフォーム・建設／車の買取・修理 ほか）。分野を言っていただければお繋ぎします</li><li>整体院・治療院・サロンの院長（主宰するオンラインサロンUPLINKに残った講師5名＝全員現役の院長／コンサル先／同業）。治療院向けに商売をされている方には、こちらからお繋ぎできます</li><li>湘南に24〜25年。サーフィン仲間が多数</li><li>前職（花王販売株式会社）時代のつながり</li></ul>
+        <h4>SKILLS｜スキル</h4><ul><li>業務の仕分け（社長がやらなくていい仕事を見つけて、AI・外注・スタッフに渡す。手段はAIに限りません）</li><li>AI導入（SNS投稿・顧客対応・書類づくり・記録の自動化。設定はすべてこちらで行います。動いている画面をそのままお見せできます）</li><li>コーチング（Soleado プロコーチ資格。仕組みを入れても動かない原因を対話で外す）</li><li>SNS集客（ThreadsとInstagram。自分の院はほぼこの2つで集客が成り立っています）</li><li>整体の施術と院経営（14年）／LP制作・Googleビジネスプロフィール運用</li></ul>
+      </div>
+
+    </details>
+  </section>
+
+  <section>
+    <div class="sec-title">略歴</div>
+    <details open>
+      <summary>ビジネス・個人・その他</summary>
+
+      <div class="bio-block">
+        <h4 style="font-size:12.5px;letter-spacing:.14em;color:var(--green);margin:14px 0 8px;font-weight:700">ビジネス</h4>
+        <dl><dt>事業名</dt><dd>合同会社UPLINK（経営者の時間づくり）／ラポール美容整体院（院長14年）</dd><dt>専門分野</dt><dd>社長を現場から解放する仕掛け人（経営者の時間を1日2時間つくる）。自由診療の院長・サロン・士業・一人社長など、社長自身が現場に出ている会社が得意です</dd><dt>所在地</dt><dd>神奈川県</dd><dt>経験年数</dt><dd>経営14年（自費の美容整体院を運営。いまはその経験を、経営者の時間づくりに使っています）</dd><dt>過去の職業</dt><dd>柔道整復師の専門学校（学費は自分で稼ぎながら通いました）／花王販売株式会社の営業・約2年／整骨院を開業</dd></dl>
+        <h4 style="font-size:12.5px;letter-spacing:.14em;color:var(--green);margin:14px 0 8px;font-weight:700">個人</h4>
+        <dl><dt>趣味</dt><dd>波乗り（職場と海のあいだに家があるので、波があれば毎朝、海に入ってから仕事へ）／富士登山（年1〜2回。一緒に登れる方、募集中）／車中泊旅行／海外旅行（年末年始は海外で過ごすと決めて独立しました）／暇があればAIと喋っています（座っているのが苦手なので、うろうろしながら）</dd><dt>関心事</dt><dd>効率化そのものより、空いた時間で「その人が何をしたいか」を叶えること。人との時間を大切にすること。気になるニュースは地球温暖化</dd><dt>出身地</dt><dd>東京生まれ、埼玉・浦和育ち（与野と北浦和のあいだ）。サッカー少年でした</dd></dl>
+        <h4 style="font-size:12.5px;letter-spacing:.14em;color:var(--green);margin:14px 0 8px;font-weight:700">その他</h4>
+        <dl><dt>強い願望</dt><dd>じっとしていられないタイプで、パソコン好きと言いながら座っているのが苦痛。うろうろしながらAIと喋っています。沖縄や海外に拠点を持ち、好きな時に好きな場所で仕事をして、好きなことだけをする生活。寒いのが苦手なので、55歳までに夏と夏を行き来する暮らしをつくります。</dd><dt>誰も知らない私</dt><dd>あんまり仕事をしたくありません（口癖のように言ってしまうので、知っている人は知っています）。お店のことはもちろんしっかりやりますが、できれば何もせず、海で波乗りをして、帰ってビールを飲む。その生活が当たり前に続いたら最高だと思っています。</dd><dt>成功の鍵</dt><dd>「自分がやったほうが早い」を手放したこと。パソコンが苦手なままでも、仕組みに渡せば回ると分かったこと。</dd></dl>
+      </div>
+
+    </details>
+  </section>
+
+  <footer>
+    合同会社UPLINK<br>
+    <a href="https://hiro0183.github.io/uplink-lp/" target="_blank" rel="noopener">https://hiro0183.github.io/uplink-lp/</a><br>
+    更新日 2026-10-18<br>
+    このページはLinkedInからお越しの方向けです（検索には出しません）
+  </footer>
+
+</div>
+</body>
+</html>
