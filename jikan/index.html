@@ -96,7 +96,7 @@ em{font-style:normal;color:var(--green);font-weight:700}
 
 /* 問い */
 .ask{text-align:center;align-items:center}
-.ask h2{font-size:clamp(34px,7vw,72px);font-weight:800}
+.ask h2{font-size:clamp(28px,5.4vw,56px);font-weight:800}
 .ask .lead{margin:0 auto}
 .choices{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;width:100%}
 .choice{appearance:none;font:inherit;color:inherit;text-align:left;cursor:pointer;background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:6px;transition:border-color .15s, background .15s, transform .15s}
@@ -119,6 +119,28 @@ em{font-style:normal;color:var(--green);font-weight:700}
 .step{border-top:3px solid var(--green);padding-top:14px;display:flex;flex-direction:column;gap:6px}
 .step .n{font-family:var(--fm);font-size:36px;font-weight:800;color:var(--green);line-height:1}
 .step p{font-size:14.5px;color:var(--ink2)}
+
+/* 時間の値段 */
+.sum{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sum > div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 20px;display:flex;flex-direction:column;align-items:center;min-width:110px}
+.sum > div.hi{background:var(--gold-soft);border:2px solid var(--gold)}
+.sum .k{font-size:13px;font-weight:700;color:var(--mut)}
+.sum .v{font-family:var(--fm);font-size:clamp(30px,4.6vw,44px);font-weight:800;line-height:1.2}
+.sum .hi .v{color:var(--gold)}
+.sum small{font-size:14px;margin-left:2px}
+.sum .x{font-size:13px;font-weight:700;color:var(--mut)}
+.calc{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.calc-q{font-weight:700;font-size:16px}
+.calc-in{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.calc-in label{font-weight:700;font-size:14px}
+.calc-in input{font:inherit;font-size:18px;width:130px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+.calc-in input:focus{outline:2px solid var(--green);outline-offset:1px}
+.pre{display:flex;gap:6px;margin-left:6px}
+.pre button{font:inherit;font-size:13px;font-weight:700;color:var(--green);background:transparent;border:1px solid var(--green);border-radius:999px;padding:5px 11px;cursor:pointer}
+.calc-out{font-size:clamp(15px,2vw,18px);color:var(--ink2)}
+.calc-out b{font-family:var(--fm);font-size:1.35em;color:var(--green)}
+.calc small{font-size:12.5px;color:var(--mut)}
+@media (max-width:760px){.sum .x{width:100%;text-align:center}.sum > div{flex:1}.pre{margin-left:0}}
 
 /* 締め */
 .close h2 .q{color:var(--green)}
@@ -272,11 +294,39 @@ em{font-style:normal;color:var(--green);font-weight:700}
   </div>
 </section>
 
+<!-- 5b 時間の値段 -->
+<section class="slide alt" id="s5b">
+  <div class="in">
+    <p class="no">05 ｜ 時間の値段</p>
+    <h2>1日2時間を、<br>1年で数えてみると。</h2>
+    <div class="sum">
+      <div><span class="k">1日</span><span class="v">2<small>時間</small></span></div>
+      <span class="x">×30日</span>
+      <div><span class="k">1か月</span><span class="v">60<small>時間</small></span></div>
+      <span class="x">×12か月</span>
+      <div class="hi"><span class="k">1年</span><span class="v">720<small>時間</small></span></div>
+    </div>
+    <p class="lead">720時間は、<em>8時間勤務のおよそ90日分</em>。1年のうち3か月ぶんの「社長の時間」です。</p>
+    <div class="calc">
+      <p class="calc-q">ちなみに、社長ご自身の時給は、いくらくらいでしょう？</p>
+      <div class="calc-in">
+        <label for="rate">時給</label>
+        <input id="rate" type="number" inputmode="numeric" min="0" step="500" placeholder="5000">
+        <span>円</span>
+        <span class="pre"><button type="button" data-v="3000">3,000</button><button type="button" data-v="5000">5,000</button><button type="button" data-v="10000">10,000</button></span>
+      </div>
+      <p class="calc-out" id="calcOut" aria-live="polite">入れると、1か月・1年の金額が出ます。</p>
+      <small>わからなければ、年収 ÷ 2,400時間（1日8時間×300日）がひとつの目安です。</small>
+    </div>
+    <p class="lead">費用を見るときの、<span class="mark">ひとつの物差し</span>にしてみてください。<br>ただ、この時間の本当の値打ちは、金額より<em>「何に使うか」</em>で決まります。</p>
+  </div>
+</section>
+
 <!-- 6 問い -->
-<section class="slide alt ask" id="s6">
+<section class="slide ask" id="s6">
   <div class="in ask">
-    <p class="no">05 ｜ 問い</p>
-    <h2>残った時間で、<br>何をしますか？</h2>
+    <p class="no">06 ｜ 問い</p>
+    <h2>この720時間が手に入ったら、<br>何をしたいですか？</h2>
     <p class="lead">時間は、使い道を決めていないと<span class="mark">また作業で埋まります</span>。<br>気になるものを選んでみてください（いくつでも）。</p>
     <div class="choices" id="choices">
       <button class="choice" type="button" aria-pressed="false" data-k="mirai"><span class="chk">✓ 選んだ</span><b>未来をつくる</b><span>新しい商品・事業・3年後の姿を考える時間に</span></button>
@@ -288,9 +338,9 @@ em{font-style:normal;color:var(--green);font-weight:700}
 </section>
 
 <!-- 7 書いてみる -->
-<section class="slide" id="s7">
+<section class="slide alt" id="s7">
   <div class="in">
-    <p class="no">06 ｜ あなたの答え</p>
+    <p class="no">07 ｜ あなたの答え</p>
     <h2>1日2時間あったら、<br>最初の1週間で何をしますか？</h2>
     <div class="answer">
       <label for="ans1">空いた2時間で、いちばん最初にやりたいこと</label>
@@ -304,9 +354,9 @@ em{font-style:normal;color:var(--green);font-weight:700}
 </section>
 
 <!-- 8 始め方 -->
-<section class="slide alt" id="s8">
+<section class="slide" id="s8">
   <div class="in">
-    <p class="no">07 ｜ 始め方</p>
+    <p class="no">08 ｜ 始め方</p>
     <h2>まずは3つだけ。</h2>
     <div class="steps">
       <div class="step"><span class="n">1</span><h3>仕事を書き出す</h3><p>1週間の仕事をぜんぶ並べて、「自分にしかできない」「人に任せる」「AIに任せる」「やめる」に仕分けます。</p></div>
@@ -317,9 +367,9 @@ em{font-style:normal;color:var(--green);font-weight:700}
 </section>
 
 <!-- 9 締め -->
-<section class="slide close" id="s9">
+<section class="slide alt close" id="s9">
   <div class="in">
-    <p class="no">08 ｜ さいごに</p>
+    <p class="no">09 ｜ さいごに</p>
     <h2>AIは、時間をつくる道具です。<br><span class="q">何に使うかを決めるのは、社長です。</span></h2>
     <p class="lead">「何を任せられるか」の仕分けから、一緒にやります。<br>まずは30分、あなたの1週間の仕事を見せてください。</p>
     <div class="cta">
@@ -359,6 +409,15 @@ em{font-style:normal;color:var(--green);font-weight:700}
     if(load('c:'+b.dataset.k)==='1')b.setAttribute('aria-pressed','true');
     b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on?'true':'false');save('c:'+b.dataset.k,on?'1':'0');});
   });
+  var rate=document.getElementById('rate'), out=document.getElementById('calcOut');
+  function yen(n){return Math.round(n).toLocaleString('ja-JP');}
+  function calc(){var r=parseFloat(rate.value);
+    if(!(r>0)){out.textContent='入れると、1か月・1年の金額が出ます。';return;}
+    out.innerHTML='1か月 60時間 × '+yen(r)+'円 ＝ <b>'+yen(r*60)+'円</b><br>1年 720時間 × '+yen(r)+'円 ＝ <b>'+yen(r*720)+'円</b>';
+    save('rate',String(r));}
+  rate.addEventListener('input',calc);
+  [].slice.call(document.querySelectorAll('.pre button')).forEach(function(b){b.addEventListener('click',function(){rate.value=b.dataset.v;calc();});});
+  var rv=load('rate'); if(rv){rate.value=rv;calc();}
   ['ans1','ans2'].forEach(function(id){var t=document.getElementById(id);var v=load(id);if(v)t.value=v;t.addEventListener('input',function(){save(id,t.value);});});
 })();
 </script>
